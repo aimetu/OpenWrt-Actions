@@ -20,8 +20,8 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 sed -i "s/ImmortalWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
 # 修改 wifi 无线名称 & 密码
-sed -i "s/OWRT/OpenWrt/g" package/base-files/files/etc/uci-defaults/990_set-wireless.sh
-sed -i "s/12345678/password/g" package/base-files/files/etc/uci-defaults/990_set-wireless.sh
+sed -i "s/OWRT/OpenWrt/g" target/linux/qualcommax/base-files/etc/uci-defaults/990_set-wireless.sh
+sed -i "s/12345678/password/g" target/linux/qualcommax/base-files/etc/uci-defaults/990_set-wireless.sh
 
 # 最大连接数修改为65535
 # sed -i "s/nf_conntrack_max=.*/nf_conntrack_max=65535/g" package/kernel/linux/files/sysctl-nf-conntrack.conf
@@ -52,7 +52,7 @@ git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-adv
 # git clone https://github.com/sirpdboy/luci-app-advancedplus.git package/luci-app-advancedplus
 
 # 删除自带 AdguardHome 文件，添加 AdguardHome 广告过滤插件
-rm -rf feeds/packages/net/adguardhome
+# rm -rf feeds/packages/net/adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
