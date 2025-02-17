@@ -87,3 +87,4 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 # 添加 OpenClash 插件（ dev 版 ）
 # rm -rf feeds/luci/applications/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/luci-app-openclash
