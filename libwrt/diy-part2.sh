@@ -85,5 +85,5 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 # git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # 添加 OpenClash 插件（ dev 版 ）
-rm -rf feeds/luci/applications/luci-app-openclash
+# rm -rf feeds/luci/applications/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
