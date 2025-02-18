@@ -58,7 +58,7 @@ git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-adv
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
-# 更新 golang 依赖（ mosdns & alist 插件 )
+# 更新 golang 依赖（ mosdns & alist )
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 
@@ -66,23 +66,27 @@ git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/l
 # rm -rf feeds/packages/net/v2ray-geodata
 # git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
-# 添加 mosdns 插件
+# mosdns
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/luci/applications/luci-app-mosdns
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 
-# 添加 smartdns 插件
+# smartdns
 # rm -rf feeds/packages/net/smartdns
 # rm -rf feeds/luci/applications/luci-app-smartdns
 # git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns
 # git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
-# 添加 nekobox 插件
-# git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
+# nekobox
+# git clone --depth=1 https://github.com/Thaolga/openwrt-nekobox.git -b main package/openwrt-nekobox
 
-# 添加 nikki 插件
-# git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
+# neko
+# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
 
+# nikki
+# git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.gitt -b main package/luci-app-nikki
+
+# OpenClash（ dev 版 ）
 rm -rf feeds/luci/applications/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/luci-app-openclash
