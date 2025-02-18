@@ -76,13 +76,19 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 # git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns
 # git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
-# 添加 nekobox 插件
-# git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
+# nekobox
+# git clone --depth=1 https://github.com/Thaolga/openwrt-nekobox.git -b main package/openwrt-nekobox
 
-# 添加 nikki 插件
-# git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
+# neko
+# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
 
-# 添加 OpenClash 插件（ dev 版 ）
+# nikki
+# git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.gitt -b main package/luci-app-nikki
+
+# OpenClash（ dev 版 ）
 rm -rf feeds/luci/applications/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/luci-app-openclash
+
+./scripts/feeds update -a
+./scripts/feeds install -a
