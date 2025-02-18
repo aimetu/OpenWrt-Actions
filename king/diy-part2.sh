@@ -37,14 +37,14 @@ sed -i "s/LiBwrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/m
 
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
 # rm -rf feeds/luci/themes/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-theme-argon.git package/themes/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/themes/luci-theme-argon
+# git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-theme-argon-config
 
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
 # 添加 kucat 主题，搭配 luci-app-advancedplus 设置参数 
-# git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git package/themes/luci-theme-kucat
+# git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git package/luci-theme-kucat
 
 # 添加 advanced 系统设置插件
 # git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
@@ -52,6 +52,7 @@ sed -i "s/LiBwrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/m
 
 # 删除自带 AdguardHome 文件，添加 AdguardHome 广告过滤插件
 # rm -rf feeds/packages/net/adguardhome
+# https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
