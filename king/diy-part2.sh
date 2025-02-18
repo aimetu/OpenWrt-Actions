@@ -38,7 +38,7 @@ sed -i "s/LiBwrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/m
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
 # rm -rf feeds/luci/themes/luci-theme-argon
 # git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-theme-argon-config
+# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
