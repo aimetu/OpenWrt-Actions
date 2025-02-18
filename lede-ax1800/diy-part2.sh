@@ -78,3 +78,6 @@ git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smart
 rm -rf feeds/luci/applications/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/luci-app-openclash
+
+./scripts/feeds update -a
+./scripts/feeds install -a
