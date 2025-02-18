@@ -52,6 +52,7 @@ sed -i "s/LiBwrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/m
 
 # 删除自带 AdguardHome 文件，添加 AdguardHome 广告过滤插件
 # rm -rf feeds/packages/net/adguardhome
+# rm -rf feeds/luci/applications/luci-app-adguardhome
 # git clone https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
