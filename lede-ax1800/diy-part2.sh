@@ -45,7 +45,7 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-a
 
 # 删除自带 AdguardHome 文件，添加 AdguardHome 广告过滤插件
 # rm -rf feeds/packages/net/adguardhome
-# https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
+# git clone https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
