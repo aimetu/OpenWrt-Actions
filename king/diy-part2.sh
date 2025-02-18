@@ -52,7 +52,7 @@ sed -i "s/LiBwrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/m
 
 # 删除自带 AdguardHome 文件，添加 AdguardHome 广告过滤插件
 # rm -rf feeds/packages/net/adguardhome
-# https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
+# git clone https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
@@ -82,5 +82,6 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 # git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # 添加 OpenClash 插件（ dev 版 ）
-# rm -rf feeds/luci/applications/luci-app-openclash
+rm -rf feeds/luci/applications/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
