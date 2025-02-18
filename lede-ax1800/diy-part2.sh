@@ -72,6 +72,9 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-a
 # 添加 nekobox 插件
 # git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
+# 添加 neko 插件
+git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
+
 # 添加 nikki 插件
 # git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 # git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main package/luci-app-nikki
