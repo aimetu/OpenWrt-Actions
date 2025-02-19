@@ -25,6 +25,10 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 # 更换 KERNE 内核
 sed -i "s/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=6.6/g" target/linux/qualcommax/Makefile
 
+# 更换 bin 固件内核大小
+sed -i "s/factory.bin recovery.bin/factory.bin sysupgrade.bin/g" target/linux/qualcommax/image/ipq60xx.mk
+sed -i "s/pad-to 12288k/pad-to 6144k/g" target/linux/qualcommax/image/ipq60xx.mk
+
 # samba 解除 root 限制
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
 
