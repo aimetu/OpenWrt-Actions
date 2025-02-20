@@ -58,7 +58,7 @@ git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-adv
 # rm -rf feeds/packages/net/adguardhome
 # rm -rf feeds/luci/applications/luci-app-adguardhome
 # git clone https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
-# git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
 # 更新 golang 依赖（ mosdns & alist 插件 )
