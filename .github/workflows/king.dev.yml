@@ -19,7 +19,7 @@ env:
   REPO_URL: https://github.com/King-Of-Knights/openwrt-6.x.git
   REPO_BRANCH: main
   FEEDS_CONF: king/feeds.conf.default
-  CONFIG_FILE: king/dev.config
+  CONFIG_FILE: king/.config
   DIY_P1_SH: king/diy-part1.sh
   DIY_P2_SH: king/diy-part2.sh
   UPLOAD_BIN_DIR: false
@@ -28,10 +28,6 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
-  PACK_DOWNLOAD_TARGET_PATH: openwrtPack/armvirt64
-  PACK_PACKAGE_SOC: s905x3
-  PACK_KERNEL_VERSION_NAME: 6.6.y
-  KERNEL_REPO_URL: ophub/kernel
 
 jobs:
   build:
