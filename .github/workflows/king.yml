@@ -9,7 +9,7 @@
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 
-name: king
+name: King
 
 on:
   repository_dispatch:
@@ -121,7 +121,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: LiBwrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: King_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Generate release tag
