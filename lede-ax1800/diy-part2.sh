@@ -17,7 +17,7 @@ sed -i "s/LEDE/OpenWrt/g" package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 # 修改 wifi 无线名称
-sed -i "s/LEDE/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.sh
+sed -i "s/LEDE/OpenWrt/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 最大连接数修改为 65535
 # sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
