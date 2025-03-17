@@ -11,19 +11,19 @@
 #
 
 # 修改 device 设备名称
-# sed -i "s/LibWrt/OpenWrt/g" package/base-files/files/bin/config_generate
+sed -i "s/LEDE/OpenWrt/g" package/base-files/files/bin/config_generate
 
 # 默认网关 ip 地址修改
 sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 # 修改 wifi 无线名称
-# sed -i "s/LibWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.sh
+sed -i "s/LEDE/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.sh
 
 # 最大连接数修改为 65535
 # sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
 # 更换 KERNE 内核
-# sed -i "s/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=6.6/g" target/linux/qualcommax/Makefile
+sed -i "s/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=6.6/g" target/linux/qualcommax/Makefile
 
 # 更换 bin 固件内核大小
 # sed -i "s/factory.bin recovery.bin/factory.bin sysupgrade.bin/g" target/linux/qualcommax/image/ipq60xx.mk
@@ -33,9 +33,9 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
 
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
-# rm -rf feeds/luci/themes/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+rm -rf feeds/luci/themes/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
@@ -55,29 +55,29 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
 # 更新 golang 依赖（ mosdns & alist )
-# rm -rf feeds/packages/lang/golang
-# git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 
 # 替换 geodata 依赖
-# rm -rf feeds/packages/net/v2ray-geodata
-# git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+rm -rf feeds/packages/net/v2ray-geodata
+git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # mosdns
-# rm -rf feeds/packages/net/mosdns
-# rm -rf feeds/luci/applications/luci-app-mosdns
-# git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
+rm -rf feeds/packages/net/mosdns
+rm -rf feeds/luci/applications/luci-app-mosdns
+git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 
 # smartdns
-# rm -rf feeds/packages/net/smartdns
-# rm -rf feeds/luci/applications/luci-app-smartdns
-# git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
-# git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
+git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # nekobox
-# git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
+git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko
-# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
+git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
 
 # nikki
 # git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
