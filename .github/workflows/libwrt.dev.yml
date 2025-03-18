@@ -9,7 +9,7 @@
 #
 # updated version ref: https://github.com/dxdf/ActionsBuildOpenWRT
 
-name: Build OpenWrt JD-CLOUD-AX1800
+name: LiBwrt.dev
 
 on:
   repository_dispatch:
