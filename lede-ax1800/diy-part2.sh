@@ -71,13 +71,13 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/applications/luci-app-smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
-git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # nekobox
 git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko
-git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
+# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
 
 # nikki
 # git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
