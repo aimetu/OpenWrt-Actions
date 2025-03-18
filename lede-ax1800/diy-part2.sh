@@ -86,7 +86,7 @@ git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # nekobox
-git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
+# git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko
 # git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
