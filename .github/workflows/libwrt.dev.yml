@@ -1,15 +1,15 @@
 #
-# https://github.com/P3TERX/Actions-OpenWrt
-#
-# File: .github/workflows/openwrt-bulder.yml
-# Description: Build OpenWrt using GitHub Actions
-#
-# Copyright (c) 2019-2024 P3TERX <https://p3terx.com>
+# Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
+#
+# https://github.com/P3TERX/Actions-OpenWrt
+# Description: Build OpenWrt using GitHub Actions
+#
+# updated version ref: https://github.com/dxdf/ActionsBuildOpenWRT
 
-name: libwrt.dev
+name: Build OpenWrt JD-CLOUD-AX1800
 
 on:
   repository_dispatch:
@@ -32,9 +32,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-22.04
-    outputs:
-      deviceName: ${{ env.DEVICE_NAME }}
-      fileDate: ${{ env.FILE_DATE }}
 
     steps:
     - name: Before freeing up disk space
@@ -152,7 +149,7 @@ jobs:
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
 
     - name: Check space usage
-      if: ${{ !cancelled() }}
+      if: (!cancelled())
       run: df -hT
 
     - name: Upload bin directory
