@@ -27,6 +27,9 @@ sed -i "s/12345678/password/g" target/linux/qualcommax/base-files/etc/uci-defaul
 # sed -i "s/nf_conntrack_max=.*/nf_conntrack_max=65535/g" package/kernel/linux/files/sysctl-nf-conntrack.conf
 # sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
+# 修改 luci 文件，添加 NSS Load 相关状态显示
+# sed -i "s#const fd = popen('top -n1 | awk \\\'/^CPU/ {printf(\"%d%\", 100 - \$8)}\\\'')#const fd = popen(access('/sbin/cpuinfo') ? '/sbin/cpuinfo' : \"top -n1 | awk \\'/^CPU/ {printf(\"%d%\", 100 - \$8)}\\'\")#g"
+
 # 修改 wifi 默认打开
 # sed -i "s/disabled='${defaults ? 0 : 1}'/disabled='0'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
@@ -58,7 +61,7 @@ sed -i "s/12345678/password/g" target/linux/qualcommax/base-files/etc/uci-defaul
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
-# 更新 golang 依赖（ mosdns & alist )
+# 更新 golang 依赖（ mosdns & alist 插件 )
 # rm -rf feeds/packages/lang/golang
 # git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 
@@ -90,6 +93,11 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 rm -rf feeds/luci/applications/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/luci-app-openclash
+
+# alist
+# rm -rf feeds/packages/net/alist
+# rm -rf feeds/luci/applications/luci-app-alist
+# git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
