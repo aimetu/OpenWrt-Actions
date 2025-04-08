@@ -9,7 +9,7 @@
 #
 # updated version ref: https://github.com/dxdf/ActionsBuildOpenWRT
 
-name: immortalwrt
+name: immortalwrt.dev
 
 on:
   repository_dispatch:
