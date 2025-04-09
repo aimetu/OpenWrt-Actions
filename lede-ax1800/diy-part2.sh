@@ -67,12 +67,12 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
 # 更新 golang 依赖（ mosdns & alist )
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 
 # 替换 geodata 依赖
-rm -rf feeds/packages/net/v2ray-geodata
-git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+# rm -rf feeds/packages/net/v2ray-geodata
+# git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # mosdns
 rm -rf feeds/packages/net/mosdns
