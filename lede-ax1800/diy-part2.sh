@@ -89,11 +89,11 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 # git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko
-git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
+# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
 
 # nikki
 # git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
-git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main package/luci-app-nikki
+# git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main package/luci-app-nikki
 
 # openclash（ dev 版 ）
 rm -rf feeds/luci/applications/luci-app-openclash
