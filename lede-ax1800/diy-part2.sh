@@ -100,5 +100,10 @@ rm -rf feeds/luci/applications/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/luci-app-openclash
 
+# alist
+rm -rf feeds/packages/net/alist
+rm -rf feeds/luci/applications/luci-app-alist
+git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
