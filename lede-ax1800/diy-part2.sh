@@ -35,7 +35,7 @@ sed -i '/V4UetPzk$CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/z
 # sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
 # 更换 KERNE 内核
-# sed -i "s/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=6.6/g" target/linux/qualcommax/Makefile
+sed -i "s/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=6.6/g" target/linux/qualcommax/Makefile
 
 # 更换 bin 固件内核大小
 # sed -i "s/factory.bin recovery.bin/factory.bin sysupgrade.bin/g" target/linux/qualcommax/image/ipq60xx.mk
