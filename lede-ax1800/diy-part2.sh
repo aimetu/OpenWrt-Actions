@@ -105,5 +105,8 @@ rm -rf feeds/packages/net/alist
 rm -rf feeds/luci/applications/luci-app-alist
 git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
+# luci-app-tinyfilemanager（ 文件管理 ）
+git clone --depth 1 --branch master --single-branch --no-checkout https://github.com/muink/luci-app-tinyfilemanager.git package/luci-app-tinyfilemanager
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
