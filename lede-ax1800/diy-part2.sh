@@ -80,10 +80,10 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 
 # smartdns
-# rm -rf feeds/packages/net/smartdns
-# rm -rf feeds/luci/applications/luci-app-smartdns
-# git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns
-# git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns.git  feeds/packages/net/smartdns
+git clone -b lede https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
 
 # nekobox
 # git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
@@ -100,13 +100,20 @@ rm -rf feeds/luci/applications/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/luci-app-openclash
 
+# passwall 移除 openwrt feeds 自带的核心包
+#rm -rf feeds/packages/net/{xray*,v2ray*,v2ray*,sing*}
+rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
+
 # alist
 rm -rf feeds/packages/net/alist
 rm -rf feeds/luci/applications/luci-app-alist
 git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
-# luci-app-tinyfilemanager（ 文件管理 ）
-git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
+# filemanager（ 文件管理 ）
+git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
+# git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
