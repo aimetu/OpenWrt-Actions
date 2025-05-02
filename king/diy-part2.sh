@@ -95,5 +95,8 @@ git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/lu
 # rm -rf feeds/luci/applications/luci-app-alist
 # git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
+# jdCloud ax6600 led screen ctrl
+git clone --depth=1 https://github.com/NONGFAH/luci-app-athena-led package/luci-app-athena-led
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
