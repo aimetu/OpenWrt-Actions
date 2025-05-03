@@ -16,8 +16,8 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/Lienol/openwrt.git Lienol
-  REPO_BRANCH: 24.10  
+  REPO_URL: https://github.com/Lienol/openwrt.git
+  REPO_BRANCH: "24.10"
   FEEDS_CONF: Lienol/feeds.conf.default
   CONFIG_FILE: Lienol/dev.config
   DIY_P1_SH: Lienol/diy-part1.sh
