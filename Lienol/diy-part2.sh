@@ -11,25 +11,23 @@
 #
 
 # 修改 device 设备名称
-sed -i "s/hostname='.*'/hostname='OpenWrt'/g" package/base-files/files/bin/config_generate
-sed -i "s/hostname='.*'/hostname='OpenWrt'/g" package/base-files/luci2/bin/config_generate
-
-# 加入作者信息
-sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='OpenWrt-$(date +%Y%m%d)'/g" package/lean/default-settings/files/zzz-default-settings   
-sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION=' By J.Y'/g" package/lean/default-settings/files/zzz-default-settings
-
-sed -i "2iuci set istore.istore.channel='OpenWrt'" package/lean/default-settings/files/zzz-default-settings
-sed -i "3iuci commit istore" package/lean/default-settings/files/zzz-default-settings
+# sed -i "s/LibWrt/OpenWrt/g" package/base-files/files/bin/config_generate
 
 # 默认网关 ip 地址修改
 sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/luci2/bin/config_generate
 
 # 修改 wifi 无线名称
-sed -i "s/LEDE/OpenWrt/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
+# sed -i "s/LiBwrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+
+# 加入作者信息
+# sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='OpenWrt-$(date +%Y%m%d)'/g" package/lean/default-settings/files/zzz-default-settings   
+# sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION=' By J.Y'/g" package/lean/default-settings/files/zzz-default-settings
+
+# sed -i "2iuci set istore.istore.channel='OpenWrt'" package/lean/default-settings/files/zzz-default-settings
+# sed -i "3iuci commit istore" package/lean/default-settings/files/zzz-default-settings
 
 # 清除默认密码password
-sed -i '/V4UetPzk$CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
+# sed -i '/V4UetPzk$CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
 
 # 最大连接数修改为 65535
 # sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
