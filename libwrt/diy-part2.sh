@@ -17,8 +17,7 @@ sed -i "s/hostname='.*'/hostname='OpenWrt'/g" package/base-files/files/bin/confi
 sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 # 修改 wifi 无线名称
-#sed -i "s/ImmortalWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
-sed -i "s/ssid='${defaults?.ssid || ".*"}'/ssid='${defaults?.ssid || "OpenWrt"}'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+sed -i "s/LiBwrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
 # 修改 wifi 无线名称 & 密码
 sed -i "s/BASE_SSID='.*'/BASE_SSID='OpenWrt'/g" target/linux/qualcommax/base-files/etc/uci-defaults/990_set-wireless.sh
