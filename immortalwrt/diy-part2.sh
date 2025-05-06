@@ -86,7 +86,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/luci-app-passwall
 
 # nikki
-# git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.gitt -b main package/luci-app-nikki
+git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main package/luci-app-nikki
 
 # nekobox
 # git clone --depth=1 https://github.com/Thaolga/openwrt-nekobox.git -b main package/openwrt-nekobox
