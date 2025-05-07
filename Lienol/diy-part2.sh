@@ -11,7 +11,7 @@
 #
 
 # 修改 device 设备名称
-# sed -i "s/LibWrt/OpenWrt/g" package/base-files/files/bin/config_generate
+# sed -i "s/hostname='.*'/hostname='OpenWrt'/g" package/base-files/files/bin/config_generate
 
 # 默认网关 ip 地址修改
 sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
@@ -49,13 +49,6 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
-
-# 添加 kucat 主题，搭配 luci-app-advancedplus 设置参数 
-# git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git package/luci-theme-kucat
-
-# 添加 advanced 系统设置插件
-# git clone https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
-# git clone https://github.com/sirpdboy/luci-app-advancedplus.git package/luci-app-advancedplus
 
 # 更新 golang 依赖（ mosdns & alist )
 # rm -rf feeds/packages/lang/golang
@@ -95,8 +88,8 @@ git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main 
 
 # openclash（ dev 版 ）
 rm -rf feeds/luci/applications/luci-app-openclash
-# git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/luci-app-openclash
+# git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
 # passwall(2)
 rm -rf feeds/luci/applications/luci-app-passwall
