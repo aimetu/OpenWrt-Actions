@@ -80,10 +80,10 @@ git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/lu
 
 # passwall(2)
 rm -rf feeds/luci/applications/luci-app-passwall
-# rm -rf feeds/luci/applications/luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
-# git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall
 
 # nikki
 git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main package/luci-app-nikki
