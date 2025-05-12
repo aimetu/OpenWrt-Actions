@@ -76,27 +76,31 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 # git clone https://github.com/pymumu/openwrt-smartdns.git  feeds/packages/net/smartdns
 # git clone https://github.com/pymumu/luci-app-smartdns.git feeds/luci/applications/luci-app-smartdns
 
-# nekobox
-# git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
-
-# neko
-# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
-
-# nikki
-# git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
-git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main package/luci-app-nikki
+# passwall(2)
+rm -rf feeds/packages/net/shadowsocks-libev
+rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall
 
 # openclash（ dev 版 ）
 rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
-# passwall(2)
-rm -rf feeds/luci/applications/luci-app-passwall
-rm -rf feeds/luci/applications/luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall
+# homeproxy
+git clone --depth 1 https://github.com/immortalwrt/homeproxy.git -b dev  package/luci-app-homeproxy
+
+# nikki
+# git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
+git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main package/luci-app-nikki
+
+# nekobox
+# git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
+
+# neko
+# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
 
 # alist
 # rm -rf feeds/packages/net/alist
