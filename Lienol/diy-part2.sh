@@ -61,6 +61,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci
 # adguardhome
 # rm -rf feeds/packages/net/adguardhome
 # rm -rf feeds/luci/applications/luci-app-adguardhome
+# git clone --depth 1 https://github.com/kenzok78/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
