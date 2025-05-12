@@ -59,9 +59,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci
 # git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # adguardhome
-# rm -rf feeds/packages/net/adguardhome
-# rm -rf feeds/luci/applications/luci-app-adguardhome
-# git clone https://github.com/sirpdboy/luci-app-adguardhome package/luci-app-adguardhome -b lua --depth 1
+rm -rf feeds/packages/net/adguardhome
+rm -rf feeds/luci/applications/luci-app-adguardhome
+git clone https://github.com/sirpdboy/luci-app-adguardhome package/luci-app-adguardhome -b lua --depth 1
 # git clone https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
