@@ -56,9 +56,9 @@ sed -i "s/BASE_WORD='.*'/ASE_WORD='password'/g" target/linux/qualcommax/base-fil
 # git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # AdguardHome
-rm -rf feeds/packages/net/adguardhome
-rm -rf feeds/luci/applications/luci-app-adguardhome
-git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
+# rm -rf feeds/packages/net/adguardhome
+# rm -rf feeds/luci/applications/luci-app-adguardhome
+# git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
