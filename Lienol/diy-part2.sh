@@ -44,8 +44,10 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
 rm -rf feeds/luci/themes/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+git clone https://github.com/sbwml/luci-theme-argon -b openwrt-24.10 package/luci-theme-argon
+# git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+
 
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
@@ -59,9 +61,10 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 # git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # adguardhome
-# rm -rf feeds/packages/net/adguardhome
-# rm -rf feeds/luci/applications/luci-app-adguardhome
-# git clone https://github.com/sirpdboy/luci-app-adguardhome package/luci-app-adguardhome -b lua --depth 1
+rm -rf feeds/other/luci-app-adguardhome
+rm -rf feeds/packages/net/adguardhome
+rm -rf feeds/luci/applications/luci-app-adguardhome
+git clone https://github.com/sirpdboy/luci-app-adguardhome package/luci-app-adguardhome -b lua --depth 1
 # git clone https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
@@ -95,7 +98,7 @@ git clone --depth 1 https://github.com/immortalwrt/homeproxy.git -b dev  package
 
 # nikki
 # git clone https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
-git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main package/luci-app-nikki
+# git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main package/luci-app-nikki
 
 # nekobox
 # git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
@@ -104,9 +107,9 @@ git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main 
 # git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
 
 # alist
-# rm -rf feeds/packages/net/alist
-# rm -rf feeds/luci/applications/luci-app-alist
-# git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
+rm -rf feeds/packages/net/alist
+rm -rf feeds/luci/applications/luci-app-alist
+git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
 
 # filemanager（ 文件管理 ）
 # git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
