@@ -44,9 +44,9 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
 rm -rf feeds/luci/themes/luci-theme-argon
-git clone https://github.com/sbwml/luci-theme-argon -b openwrt-24.10 package/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-# git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+# git clone https://github.com/sbwml/luci-theme-argon -b openwrt-24.10 package/luci-theme-argon
 
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
