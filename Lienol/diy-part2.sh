@@ -106,9 +106,9 @@ git clone --depth 1 https://github.com/immortalwrt/homeproxy.git -b dev  package
 # git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
 
 # alist
-rm -rf feeds/packages/net/alist
-rm -rf feeds/luci/applications/luci-app-alist
-git clone --depth 1 https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
+# rm -rf feeds/packages/net/alist
+# rm -rf feeds/luci/applications/luci-app-alist
+# git clone --depth 1 https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
 
 # filemanager（ 文件管理 ）
 # git clone --depth=1 https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
