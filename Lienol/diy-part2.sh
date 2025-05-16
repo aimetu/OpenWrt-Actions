@@ -100,7 +100,7 @@ git clone --depth 1 https://github.com/immortalwrt/homeproxy.git -b dev  package
 # git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main package/luci-app-nikki
 
 # nekobox
-# git clone https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
+# git clone --depth=1 https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko
 # git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
@@ -108,11 +108,11 @@ git clone --depth 1 https://github.com/immortalwrt/homeproxy.git -b dev  package
 # alist
 rm -rf feeds/packages/net/alist
 rm -rf feeds/luci/applications/luci-app-alist
-git clone https://github.com/sbwml/luci-app-alist package/luci-app-alist
+git clone --depth 1 https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
 
 # filemanager（ 文件管理 ）
-# git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
-# git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
+# git clone --depth=1 https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
+# git clone --depth=1 https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 
 # jdCloud ax6600 led screen ctrl
 # git clone --depth=1 https://github.com/NONGFAH/luci-app-athena-led package/luci-app-athena-led
