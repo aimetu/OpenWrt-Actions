@@ -61,9 +61,9 @@ sed -i 's/services/control/g' feeds/luci/applications/luci-app-wifischedule/root
 # git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # AdguardHome
-# rm -rf feeds/packages/net/adguardhome
-# rm -rf feeds/luci/applications/luci-app-adguardhome
-# git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
+rm -rf feeds/packages/net/adguardhome
+rm -rf feeds/luci/applications/luci-app-adguardhome
+git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
@@ -73,10 +73,10 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 
 # smartdns
-# rm -rf feeds/packages/net/smartdns
-# rm -rf feeds/luci/applications/luci-app-smartdns
-# git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns
-# git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns
+git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # OpenClash（ dev 版 ）
 rm -rf feeds/luci/applications/luci-app-openclash
