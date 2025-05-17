@@ -40,7 +40,12 @@ sed -i "s/BASE_WORD='.*'/ASE_WORD='password'/g" target/linux/qualcommax/base-fil
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
 
 # 调整插件显示位置
+# sed -i 's/services/system/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd.json
 sed -i 's/services/nas/g' feeds/luci/applications/luci-app-alist/root/usr/share/luci/menu.d/luci-app-alist.json
+# sed -i 's/services/nas/g' feeds/luci/applications/luci-app-samba4/root/usr/share/luci/menu.d/luci-app-samba4.json
+# sed -i 's/services/nas/g' feeds/luci/applications/luci-app-hd-idle/root/usr/share/luci/menu.d/luci-app-hd-idle.json
+# sed -i 's/services/nas/g' feeds/luci/applications/luci-app-minidlna/root/usr/share/luci/menu.d/luci-app-minidlna.json
+sed -i 's/services/control/g' feeds/luci/applications/luci-app-eqos/root/usr/share/luci/menu.d/luci-app-eqos.json
 sed -i 's/services/control/g' feeds/luci/applications/luci-app-wol/root/usr/share/luci/menu.d/luci-app-wol.json
 sed -i 's/services/control/g' feeds/luci/applications/luci-app-wifischedule/root/usr/share/luci/menu.d/luci-app-wifischedule.json
 
@@ -63,7 +68,8 @@ sed -i 's/services/control/g' feeds/luci/applications/luci-app-wifischedule/root
 # AdguardHome
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
-git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
+git clone --depth=1 https://github.com/TanZhiwen2001/luci-app-adguardhome -b main package/luci-app-adguardhome
+# git clone --depth 1 https://github.com/sirpdboy/luci-app-adguardhome -b lua package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
@@ -107,7 +113,7 @@ git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b main 
 # jdCloud ax6600 led screen ctrl
 # git clone --depth=1 https://github.com/NONGFAH/luci-app-athena-led package/luci-app-athena-led
 
-# filemanager（ 文件管理 ）
+# filemanager
 # git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
 
 ./scripts/feeds update -a
