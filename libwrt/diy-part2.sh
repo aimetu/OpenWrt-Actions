@@ -39,6 +39,11 @@ sed -i "s/BASE_WORD='.*'/ASE_WORD='password'/g" target/linux/qualcommax/base-fil
 # samba 解除 root 限制
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
 
+# 调整插件显示位置
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-alist/root/usr/share/luci/menu.d/luci-app-alist.json
+sed -i 's/services/control/g' feeds/luci/applications/luci-app-wol/root/usr/share/luci/menu.d/luci-app-wol.json
+sed -i 's/services/control/g' feeds/luci/applications/luci-app-wifischedule/root/usr/share/luci/menu.d/luci-app-wifischedule.json
+
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
 # rm -rf feeds/luci/themes/luci-theme-argon
 # git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
