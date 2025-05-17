@@ -42,6 +42,15 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 # samba 解除 root 限制
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
 
+# 调整插件显示位置
+sed -i 's/services/system/g' feeds/luci/applications/luci-app-ttyd/root/usr/share/luci/menu.d/luci-app-ttyd..json
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-alist/root/usr/share/luci/menu.d/luci-app-alist.json
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-hd-idle/root/usr/share/luci/menu.d/luci-app-hd-idle.json
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-minidlna/root/usr/share/luci/menu.d/luci-app-minidlna.json
+sed -i 's/services/nas/g' feeds/luci/applications/luci-app-samba4/root/usr/share/luci/menu.d/luci-app-samba4.json
+sed -i 's/services/control/g' feeds/luci/applications/luci-app-wifischedule/root/usr/share/luci/menu.d/luci-app-wifischedule.json
+sed -i 's/services/control/g' feeds/luci/applications/luci-app-wol/root/usr/share/luci/menu.d/luci-app-wol.json
+
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
 rm -rf feeds/luci/themes/luci-theme-argon
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
@@ -63,7 +72,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 rm -rf feeds/other/luci-app-adguardhome
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
-git clone https://github.com/sirpdboy/luci-app-adguardhome package/luci-app-adguardhome -b lua --depth 1
+git clone --depth 1 https://github.com/sirpdboy/luci-app-adguardhome -b lua package/luci-app-adguardhome
 # git clone https://github.com/xptsp/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
