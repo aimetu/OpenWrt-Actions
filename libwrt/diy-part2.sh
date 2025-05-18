@@ -59,7 +59,7 @@ sed -i 's/services/control/g' feeds/luci/applications/luci-app-wifischedule/root
 
 # 更新 golang 依赖（ mosdns & alist 插件 )
 # rm -rf feeds/packages/lang/golang
-# git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+# git clone -b 23.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
 # 替换 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
@@ -68,15 +68,15 @@ sed -i 's/services/control/g' feeds/luci/applications/luci-app-wifischedule/root
 # AdguardHome
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
-git clone --depth=1 https://github.com/TanZhiwen2001/luci-app-adguardhome -b main package/luci-app-adguardhome
-# git clone --depth 1 https://github.com/sirpdboy/luci-app-adguardhome -b lua package/luci-app-adguardhome
+git clone --depth=1 -b main https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
+# git clone --depth 1 -b lua https://github.com/sirpdboy/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
 # mosdns
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/luci/applications/luci-app-mosdns
-git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
+git clone -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 
 # smartdns
 # rm -rf feeds/packages/net/smartdns
@@ -86,7 +86,7 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/luci-app-mosdns
 
 # OpenClash（ dev 版 ）
 rm -rf feeds/luci/applications/luci-app-openclash
-git clone --depth=1 https://github.com/vernesong/OpenClash.git -b dev package/luci-app-openclash
+git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
 # passwall(2)
@@ -97,13 +97,13 @@ git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-pa
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall
 
 # nikki
-git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git -b dependabot package/luci-app-nikki
+git clone --depth=1 -b dependabot https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # nekobox
-# git clone --depth=1 https://github.com/Thaolga/openwrt-nekobox.git -b main package/openwrt-nekobox
+# git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko
-# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
+# git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # alist
 # rm -rf feeds/packages/net/alist
