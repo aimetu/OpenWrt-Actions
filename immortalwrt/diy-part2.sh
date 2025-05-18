@@ -49,15 +49,16 @@ sed -i "s/BASE_WORD='.*'/ASE_WORD='password'/g" target/linux/qualcommax/base-fil
 
 # 更新 golang 依赖（ mosdns & alist 插件 )
 # rm -rf feeds/packages/lang/golang
-# git clone -b 23.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+# git clone --depth=1 -b 23.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
 
 # 替换 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
 # git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # AdguardHome
-# rm -rf feeds/packages/net/adguardhome
-# rm -rf feeds/luci/applications/luci-app-adguardhome
+rm -rf feeds/packages/net/adguardhome
+rm -rf feeds/luci/applications/luci-app-adguardhome
+git clone --depth=1 https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
@@ -70,8 +71,8 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # smartdns
 # rm -rf feeds/packages/net/smartdns
 # rm -rf feeds/luci/applications/luci-app-smartdns
-# git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns
-# git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+# git clone --depth=1 https://github.com/pymumu/openwrt-smartdns.git package/smartdns
+# git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # OpenClash（ dev 版 ）
 rm -rf feeds/luci/applications/luci-app-openclash
@@ -89,10 +90,10 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git p
 git clone --depth=1 -b dependabot https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # nekobox
-# git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
+# git clone --depth=1 https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko
-# git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
+# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # alist
 # rm -rf feeds/packages/net/alist
