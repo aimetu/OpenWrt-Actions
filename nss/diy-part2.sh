@@ -92,7 +92,7 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 
 # passwall(2)
 rm -rf feeds/luci/applications/luci-app-passwall
-# rm -rf feeds/luci/applications/luci-app-passwall2
+rm -rf feeds/luci/applications/luci-app-passwall2
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall
