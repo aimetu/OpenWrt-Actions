@@ -13,6 +13,9 @@
 # 修改 device 设备名称
 sed -i "s/hostname='.*'/hostname='OpenWrt'/g" package/base-files/files/bin/config_generate
 
+# 修改 固件版本 显示名称
+sed -i "s/LiBwrt/ImmortalWrt/g" include/version.mk
+
 # 默认网关 ip 地址修改
 sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
