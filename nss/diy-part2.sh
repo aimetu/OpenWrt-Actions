@@ -103,6 +103,11 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall.git package/lu
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall
 
+# daed
+rm -rf feeds/packages/net/daed
+rm -rf feeds/luci/applications/luci-app-daed
+git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/dae
+
 # nikki
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
