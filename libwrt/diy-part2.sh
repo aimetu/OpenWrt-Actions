@@ -13,11 +13,18 @@
 # 修改 device 设备名称
 sed -i "s/hostname='.*'/hostname='OpenWrt'/g" package/base-files/files/bin/config_generate
 
+# 修改 固件版本 显示名称
+sed -i "s/LibWRT/ImmortalWrt/g" Config.in
+sed -i "s/LibWRT/ImmortalWrt/g" include/version.mk
+sed -i "s/LibWRT/ImmortalWrt/g" config/Config-images.in
+sed -i "s/LibWRT/ImmortalWrt/g" package/base-files/image-config.in
+
 # 默认网关 ip 地址修改
 sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 # 修改 wifi 无线名称
-sed -i "s/LiBwrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+sed -i "s/LibWRT/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+sed -i "s/ImmortalWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
 # 修改 wifi 无线名称 & 密码
 sed -i "s/BASE_SSID='.*'/BASE_SSID='OpenWrt'/g" target/linux/qualcommax/base-files/etc/uci-defaults/990_set-wireless.sh
@@ -51,27 +58,27 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-alist/root/usr/share/
 
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
 # rm -rf feeds/luci/themes/luci-theme-argon
-# git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-# git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+# git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+# git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
 # 更新 golang 依赖（ mosdns & alist 插件 )
 # rm -rf feeds/packages/lang/golang
-# git clone --depth=1 -b 23.x https://github.com/sbwml/packages_lang_golang feeds/packages/lang/golang
+# git clone --depth=1 -b 23.x https://github.com/sbwml/packages_lang_golang.git feeds/packages/lang/golang
 
 # 替换 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
-# git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+# git clone --depth=1 -b master https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
 
 # AdguardHome
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
-git clone --depth=1 https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
-# git clone --depth=1 -b lua https://github.com/sirpdboy/luci-app-adguardhome package/luci-app-adguardhome
-# git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-# git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+git clone --depth=1 -b main https://github.com/TanZhiwen2001/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone --depth=1 -b lua https://github.com/sirpdboy/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone --depth=1 -b master https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone --depth=1 -b master https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
 # mosdns
 rm -rf feeds/packages/net/mosdns
@@ -81,8 +88,8 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # smartdns
 # rm -rf feeds/packages/net/smartdns
 # rm -rf feeds/luci/applications/luci-app-smartdns
-# git clone --depth=1 https://github.com/pymumu/openwrt-smartdns.git package/smartdns
-# git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+# git clone --depth=1 -b master https://github.com/pymumu/openwrt-smartdns.git package/smartdns
+# git clone --depth=1 -b master https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # OpenClash（ dev 版 ）
 rm -rf feeds/luci/applications/luci-app-openclash
@@ -90,31 +97,41 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
 # passwall(2)
+# rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall2
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall
+git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
+git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
+git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall
+
+# homeproxy
+# rm -rf feeds/luci/applications/luci-app-homeproxy
+# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # nikki
-git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
+# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # nekobox
-# git clone --depth=1 https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
+# git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko
-# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
+# git clone --depth=1-b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
+
+# daed
+# rm -rf feeds/packages/net/daed
+# rm -rf feeds/luci/applications/luci-app-daed
+# git clone --depth=1 -b main https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
 
 # alist
 # rm -rf feeds/packages/net/alist
 # rm -rf feeds/luci/applications/luci-app-alist
-# git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
+# git clone --depth=1 -b main https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
 
 # jdCloud ax6600 led screen ctrl
-# git clone --depth=1 https://github.com/NONGFAH/luci-app-athena-led package/luci-app-athena-led
+# git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
 
 # filemanager
-# git clone --depth=1 https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
+# git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
