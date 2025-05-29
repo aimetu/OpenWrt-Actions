@@ -118,9 +118,10 @@ git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packag
 # git clone --depth=1-b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # daed
-# rm -rf feeds/packages/net/daed
-# rm -rf feeds/luci/applications/luci-app-daed
-# git clone --depth=1 -b main https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
+rm -rf feeds/packages/net/daed
+rm -rf feeds/luci/applications/luci-app-daed
+git clone --depth=1 -b main https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
+mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
 
 # alist
 # rm -rf feeds/packages/net/alist
