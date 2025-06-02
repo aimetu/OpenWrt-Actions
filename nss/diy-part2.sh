@@ -134,5 +134,7 @@ mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubu
 # filemanager
 # git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
 
+sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
