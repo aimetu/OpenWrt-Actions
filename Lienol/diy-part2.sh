@@ -86,10 +86,10 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns.git package/luci-app-mosdns
 
 # smartdns
-# rm -rf feeds/packages/net/smartdns
-# rm -rf feeds/luci/applications/luci-app-smartdns
-# git clone --depth=1 -b master https://github.com/pymumu/openwrt-smartdns.git package/smartdns
-# git clone --depth=1 -b master https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-smartdns
+git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns
+git clone https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # OpenClash（ dev 版 ）
 rm -rf feeds/luci/applications/luci-app-openclash
