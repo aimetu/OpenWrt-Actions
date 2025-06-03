@@ -56,8 +56,8 @@ sed -i 's/services/control/g' feeds/luci/applications/luci-app-wifischedule/root
 
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
 rm -rf feeds/luci/themes/luci-theme-argon
-git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 # git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/luci-theme-argon package/luci-theme-argon
 
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
@@ -69,7 +69,7 @@ git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config
 
 # 替换 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
-# git clone --depth=1 -b master https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
+# git clone --depth=1 https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
 
 # adguardhome
 rm -rf feeds/other/luci-app-adguardhome
@@ -77,8 +77,8 @@ rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
 git clone --depth=1 -b lua https://github.com/sirpdboy/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 -b main https://github.com/xptsp/luci-app-adguardhome.git package/luci-app-adguardhome
-# git clone --depth=1 -b master https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
-# git clone --depth=1 -b master https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
 # mosdns
 rm -rf feeds/packages/net/mosdns
