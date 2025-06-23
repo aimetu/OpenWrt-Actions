@@ -136,7 +136,6 @@ git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/
 
 # luci-app-diskman
 rm -rf feeds/other/luci-app-diskman
-rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-diskman
 git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
 
