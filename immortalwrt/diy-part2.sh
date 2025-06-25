@@ -115,10 +115,10 @@ git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packag
 # rm -rf feeds/luci/applications/luci-app-daed
 # git clone --depth=1 -b main https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
 
-# alist
-# rm -rf feeds/packages/net/alist
-# rm -rf feeds/luci/applications/luci-app-alist
-# git clone --depth=1 -b main https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
+# openlist
+# rm -rf feeds/packages/net/openlist
+# rm -rf feeds/luci/applications/luci-app-openlist
+# git clone --depth=1 https://github.com/sbwml/luci-app-openlist package/luci-app-openlist
 
 # jdCloud ax6600 led screen ctrl
 # git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
