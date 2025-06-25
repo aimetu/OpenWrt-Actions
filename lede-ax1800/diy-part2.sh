@@ -102,10 +102,10 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # neko
 # git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
 
-# alist
-rm -rf feeds/packages/net/alist
-rm -rf feeds/luci/applications/luci-app-alist
-git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
+# openlist
+# rm -rf feeds/packages/net/openlist
+# rm -rf feeds/luci/applications/luci-app-openlist
+# git clone --depth=1 https://github.com/sbwml/luci-app-openlist package/luci-app-openlist
 
 # filemanager（ 文件管理 ）
 git clone --depth=1 https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
