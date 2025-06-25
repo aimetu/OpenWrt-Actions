@@ -123,10 +123,10 @@ git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/
 # rm -rf feeds/luci/applications/luci-app-daed
 # git clone --depth=1 -b main https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
 
-# alist
-# rm -rf feeds/packages/net/alist
-# rm -rf feeds/luci/applications/luci-app-alist
-# git clone --depth=1 -b main https://github.com/sbwml/luci-app-alist.git package/luci-app-alist
+# openlist
+# rm -rf feeds/packages/net/openlist
+# rm -rf feeds/luci/applications/luci-app-openlist
+# git clone --depth=1 https://github.com/sbwml/luci-app-openlist package/luci-app-openlist
 
 # jdCloud ax6600 led screen ctrl
 # git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
@@ -135,9 +135,9 @@ git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/
 # git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
 
 # luci-app-diskman
-rm -rf feeds/other/luci-app-diskman
-rm -rf feeds/luci/applications/luci-app-diskman
-git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
+# rm -rf feeds/other/luci-app-diskman
+# rm -rf feeds/luci/applications/luci-app-diskman
+# git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
 
 # 修复 jdCloud ax6600 无限重启
 rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
