@@ -135,9 +135,9 @@ git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/
 # git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
 
 # luci-app-diskman
-rm -rf feeds/other/luci-app-diskman
-rm -rf feeds/luci/applications/luci-app-diskman
-git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
+# rm -rf feeds/other/luci-app-diskman
+# rm -rf feeds/luci/applications/luci-app-diskman
+# git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
 
 # 修复 jdCloud ax6600 无限重启
 rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
