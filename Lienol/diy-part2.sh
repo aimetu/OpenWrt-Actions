@@ -64,8 +64,8 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git packa
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
 # 更新 golang 依赖（ mosdns & alist )
-# rm -rf feeds/packages/lang/golang
-# git clone --depth=1 -b 23.x https://github.com/sbwml/packages_lang_golang.git feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone --depth=1 -b 23.x https://github.com/sbwml/packages_lang_golang.git feeds/packages/lang/golang
 
 # 替换 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
