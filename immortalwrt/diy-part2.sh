@@ -59,7 +59,7 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-openlist/root/usr/sha
 
 # 更新 golang 依赖（ mosdns & alist 插件 )
 # rm -rf feeds/packages/lang/golang
-# git clone --depth=1 -b 23.x https://github.com/sbwml/packages_lang_golang.git feeds/packages/lang/golang
+# git clone --depth=1 -b 24.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
 
 # 替换 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
@@ -114,6 +114,10 @@ git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packag
 # rm -rf feeds/packages/net/daed
 # rm -rf feeds/luci/applications/luci-app-daed
 # git clone --depth=1 -b main https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
+
+# 科学插件大全，移除 openwrt feeds 自带的核心包
+# rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
+# git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/helloworld
 
 # openlist
 # rm -rf feeds/packages/net/openlist
