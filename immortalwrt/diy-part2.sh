@@ -85,8 +85,8 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # OpenClash（ dev 版 ）
-# rm -rf feeds/luci/applications/luci-app-openclash
-# git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+rm -rf feeds/luci/applications/luci-app-openclash
+git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
 # passwall(2)
