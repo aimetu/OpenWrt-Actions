@@ -109,7 +109,7 @@ git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packag
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # nikki
-# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
+git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # nekobox
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
@@ -130,6 +130,10 @@ git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packag
 # rm -rf feeds/packages/net/openlist
 # rm -rf feeds/luci/applications/luci-app-openlist
 # git clone --depth=1 https://github.com/sbwml/luci-app-openlist package/luci-app-openlist
+
+# luci-app-diskman
+rm -rf feeds/luci/applications/luci-app-diskman
+git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
 
 # jdCloud ax6600 led screen ctrl
 # git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
