@@ -84,12 +84,12 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # git clone --depth=1 https://github.com/pymumu/openwrt-smartdns.git package/smartdns
 # git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
-# OpenClash（ dev 版 ）
+# OpenClash（ dev 版 ）( Mihomo Kernel )
 rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
-# passwall(2)
+# passwall(2)  ( SingBox & V2Ray Kernel )
 # rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 # rm -rf feeds/packages/net/shadowsocks-libev
 # rm -rf package/passwall/shadowsocks-libev
@@ -99,17 +99,20 @@ git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall.git pa
 git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
 git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall
 
-# homeproxy
+# homeproxy ( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
-# nikki
+# nikki ( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
-# nekobox
+# momo ( SingBox Kernel )
+git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+
+# nekobox ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
-# neko
+# neko ( SingBox Kernel )
 # git clone --depth=1-b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # daed
