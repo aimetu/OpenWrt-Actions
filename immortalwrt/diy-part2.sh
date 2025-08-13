@@ -33,7 +33,7 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-fi
 # 修改 wifi 默认打开
 # sed -i "s/disabled='${defaults ? 0 : 1}'/disabled='0'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
-# 更换 KERNEL 内核版本
+# 更换 Kernel 内核版本
 # sed -i "s/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g" target/linux/qualcommax/Makefile
 
 # samba 解除 root 限制
@@ -89,7 +89,7 @@ rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
-# passwall(2)  ( SingBox & V2Ray Kernel )
+# passwall(2) ( SingBox & V2Ray Kernel )
 # rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 # rm -rf feeds/packages/net/shadowsocks-libev
 # rm -rf package/passwall/shadowsocks-libev
