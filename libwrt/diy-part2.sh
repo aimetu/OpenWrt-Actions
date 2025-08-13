@@ -30,7 +30,7 @@ sed -i "s/ImmortalWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/w
 sed -i "s/BASE_SSID='.*'/BASE_SSID='OpenWrt'/g" target/linux/qualcommax/base-files/etc/uci-defaults/990_set-wireless.sh
 sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-files/etc/uci-defaults/990_set-wireless.sh
 
-# 最大连接数修改为65535
+# 最大连接数修改为 65535
 # sed -i "s/nf_conntrack_max=.*/nf_conntrack_max=65535/g" package/kernel/linux/files/sysctl-nf-conntrack.conf
 # sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=65535' package/base-files/files/etc/sysctl.conf
 
@@ -40,7 +40,7 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-fi
 # 修改 wifi 默认打开
 # sed -i "s/disabled='${defaults ? 0 : 1}'/disabled='0'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
-# 更换 KERNEL 内核版本
+# 更换 Kernel 内核版本
 # sed -i "s/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.1/g" target/linux/qualcommax/Makefile
 
 # samba 解除 root 限制
@@ -91,12 +91,12 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # git clone --depth=1 https://github.com/pymumu/openwrt-smartdns.git package/smartdns
 # git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
-# OpenClash（ dev 版 ）
+# OpenClash（ dev 版 ）( Mihomo Kernel )
 rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
-# passwall(2)
+# passwall(2) ( SingBox & V2Ray Kernel )
 # rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall2
@@ -104,17 +104,20 @@ git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall.git pa
 git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
 git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall
 
-# homeproxy
+# homeproxy( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
-# nikki
+# nikki( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
-# nekobox
+# momo ( SingBox Kernel )
+git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+
+# nekobox ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
-# neko
+# neko ( SingBox Kernel )
 # git clone --depth=1-b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # daed
