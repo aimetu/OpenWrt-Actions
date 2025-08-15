@@ -95,7 +95,7 @@ rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
-# passwall(2) ( SingBox & V2Ray Kernel )
+# passwall(2) ( SingBox & Xray Kernel )
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall2
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
@@ -107,7 +107,7 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git p
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # momo ( SingBox Kernel )
-git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
 
 # nekobox( SingBox Kernel )
 # git clone --depth=1 https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
