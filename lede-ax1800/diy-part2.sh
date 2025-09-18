@@ -122,10 +122,10 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
 # nekobox( SingBox Kernel )
-# git clone --depth=1 https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
+# git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko( SingBox Kernel )
-# git clone --depth=1 https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
+# git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git -b main package/openwrt-neko
 
 # daed
 # rm -rf feeds/packages/net/daed
