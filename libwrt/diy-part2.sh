@@ -66,7 +66,7 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-openlist/root/usr/sha
 
 # 更新 golang 依赖（ mosdns & alist 插件 )
 # rm -rf feeds/packages/lang/golang
-# git clone --depth=1 -b 24.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
+# git clone --depth=1 -b 25.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
 
 # 替换 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
@@ -96,6 +96,10 @@ rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
+# homeproxy( SingBox Kernel )
+# rm -rf feeds/luci/applications/luci-app-homeproxy
+# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
+
 # passwall(2) ( SingBox & Xray Kernel )
 # 移除 openwrt feeds 过时的luci版本
 rm -rf feeds/luci/applications/luci-app-passwall
@@ -108,15 +112,14 @@ git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2.git p
 rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
 git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall-packages
 
-# homeproxy( SingBox Kernel )
-# rm -rf feeds/luci/applications/luci-app-homeproxy
-# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
-
 # nikki( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # momo ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+
+# fchomo( Mihomo Kernel )
+# git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
 # nekobox ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
@@ -136,7 +139,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # openlist
 # rm -rf feeds/packages/net/openlist
 # rm -rf feeds/luci/applications/luci-app-openlist
-# git clone --depth=1 https://github.com/sbwml/luci-app-openlist package/luci-app-openlist
+# git clone --depth=1 https://github.com/sbwml/luci-app-openlist2.git package/luci-app-openlist2
 
 # luci-app-diskman
 # rm -rf feeds/luci/applications/luci-app-diskman
