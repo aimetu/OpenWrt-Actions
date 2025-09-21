@@ -74,7 +74,8 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-openlist/root/usr/sha
 # AdguardHome
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
-git clone --depth=1 -b main https://github.com/TanZhiwen2001/luci-app-adguardhome.git package/luci-app-adguardhome
+git clone --depth=1 -b dev https://github.com/stevenjoezhang/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone --depth=1 -b main https://github.com/TanZhiwen2001/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 -b lua https://github.com/sirpdboy/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
