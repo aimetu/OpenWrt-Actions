@@ -93,7 +93,7 @@ git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git feeds/luci/a
 # openclash（ dev 版 ）( Mihomo Kernel )
 rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-# git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
 # homeproxy ( SingBox Kernel )
 rm -rf feeds/luci/applications/luci-app-homeproxy
