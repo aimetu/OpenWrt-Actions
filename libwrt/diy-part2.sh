@@ -95,7 +95,7 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # OpenClash（ dev 版 ）( Mihomo Kernel )
 rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-# git clone -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
 # homeproxy( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
