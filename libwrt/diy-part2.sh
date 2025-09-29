@@ -120,8 +120,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
 
 # xray
-git clone https://github.com/xiechangan123/luci-app-xray.git package/luci-app-xray
-git clone https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
+# git clone https://github.com/xiechangan123/luci-app-xray.git package/luci-app-xray
+# git clone https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
 
 # fchomo( Mihomo Kernel )
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
