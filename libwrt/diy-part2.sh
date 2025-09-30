@@ -124,7 +124,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # git clone https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
 
 # fchomo( Mihomo Kernel )
-# git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
+git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
 # nekobox ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
