@@ -53,8 +53,9 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-openlist/root/usr/sha
 # sed -i 's/services/nas/g' feeds/luci/applications/luci-app-hd-idle/root/usr/share/luci/menu.d/luci-app-hd-idle.json
 # sed -i 's/services/nas/g' feeds/luci/applications/luci-app-minidlna/root/usr/share/luci/menu.d/luci-app-minidlna.json
 # sed -i 's/services/control/g' feeds/luci/applications/luci-app-eqos/root/usr/share/luci/menu.d/luci-app-eqos.json
-# sed -i 's/services/control/g' feeds/luci/applications/luci-app-wol/root/usr/share/luci/menu.d/luci-app-wol.json
-# sed -i 's/services/control/g' feeds/luci/applications/luci-app-wifischedule/root/usr/share/luci/menu.d/luci-app-wifischedule.json
+sed -i 's/services/network/g' feeds/luci/applications/luci-app-eqos/root/usr/share/luci/menu.d/luci-app-eqos.json
+sed -i 's/services/network/g' feeds/luci/applications/luci-app-wol/root/usr/share/luci/menu.d/luci-app-wol.json
+sed -i 's/services/network/g' feeds/luci/applications/luci-app-wifischedule/root/usr/share/luci/menu.d/luci-app-wifischedule.json
 
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
 # rm -rf feeds/luci/themes/luci-theme-argon
@@ -160,7 +161,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
 
 # 修复 rust 报错
-wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/1715173329/packages-official/refs/heads/r/lang/rust/Makefile
+# wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/1715173329/packages-official/refs/heads/r/lang/rust/Makefile
 sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
 
 ./scripts/feeds update -a
