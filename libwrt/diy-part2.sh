@@ -92,15 +92,6 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # git clone --depth=1 https://github.com/pymumu/openwrt-smartdns.git package/smartdns
 # git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
-# OpenClash（ dev 版 ）( Mihomo Kernel )
-rm -rf feeds/luci/applications/luci-app-openclash
-git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-# git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-
-# homeproxy( SingBox Kernel )
-# rm -rf feeds/luci/applications/luci-app-homeproxy
-# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
-
 # passwall(2) ( SingBox & Xray Kernel )
 # 移除 openwrt feeds 过时的luci版本
 rm -rf feeds/luci/applications/luci-app-passwall
@@ -113,18 +104,23 @@ git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2.git p
 rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
 git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall-packages
 
+# OpenClash（ dev 版 ）( Mihomo Kernel )
+rm -rf feeds/luci/applications/luci-app-openclash
+git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+
 # nikki( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
-# momo ( SingBox Kernel )
-# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
-
-# xray
-# git clone https://github.com/xiechangan123/luci-app-xray.git package/luci-app-xray
-# git clone https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
-
 # fchomo( Mihomo Kernel )
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
+
+# homeproxy( SingBox Kernel )
+# rm -rf feeds/luci/applications/luci-app-homeproxy
+# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
+
+# momo ( SingBox Kernel )
+# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
 
 # nekobox ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
@@ -132,14 +128,21 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # neko ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
+# xray（ Xray Kernel ）
+git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
+
+# xray ( Xray Kernel )
+# git clone https://github.com/xiechangan123/luci-app-xray.git package/luci-app-xray
+# git clone https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
+
+# 科学插件大全，移除 openwrt feeds 自带的核心包
+# rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
+# git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/helloworld
+
 # daed
 # rm -rf feeds/packages/net/daed
 # rm -rf feeds/luci/applications/luci-app-daed
 # git clone --depth=1 -b main https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
-
-# 科学插件大全，移除 openwrt feeds 自带的核心包
-# rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
-# git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/helloworld
 
 # openlist
 # rm -rf feeds/packages/net/openlist
@@ -150,11 +153,11 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # rm -rf feeds/luci/applications/luci-app-diskman
 # git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
 
-# jdCloud ax6600 led screen ctrl
-# git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
-
 # filemanager
 # git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
+
+# jdCloud ax6600 led screen ctrl
+# git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
 
 # 修复 jdCloud ax6600 无限重启
 rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
