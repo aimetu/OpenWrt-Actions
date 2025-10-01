@@ -128,7 +128,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # xray（ Xray Kernel ）
-git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
+# git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 
 # xray ( Xray Kernel )
 # git clone https://github.com/xiechangan123/luci-app-xray.git package/luci-app-xray
