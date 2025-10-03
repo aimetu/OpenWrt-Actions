@@ -152,6 +152,9 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # 集客 AC
 # git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/openwrt-gecoosac
 
+# lucky
+git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
+
 # luci-app-diskman
 # rm -rf feeds/luci/applications/luci-app-diskman
 # git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
