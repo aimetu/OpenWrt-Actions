@@ -111,14 +111,14 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 # nikki( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
-# fchomo( Mihomo Kernel )
+# fchomo( Mihomo Kernel ) openwrt ≥ 24.10 
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
 # homeproxy( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
-# momo ( SingBox Kernel )
+# momo ( SingBox Kernel ) openwrt ≥ 24.10 
 # git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
 
 # nekobox ( SingBox Kernel )
@@ -153,6 +153,9 @@ git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 
 # lucky
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
+
+# webdav ( openwrt ≥ 24.10 ) 
+# git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
 
 # luci-app-diskman
 # rm -rf feeds/luci/applications/luci-app-diskman
