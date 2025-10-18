@@ -9,7 +9,7 @@
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 
-name: Lienol.dev
+name: lienol.dev
 
 on:
   repository_dispatch:
@@ -159,7 +159,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: lienol_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: openwrt/bin
 
     - name: Organize files
@@ -175,7 +175,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: Lienol_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: lienol_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
