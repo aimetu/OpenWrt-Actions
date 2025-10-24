@@ -109,7 +109,7 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 # git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
 # nikki( Mihomo Kernel )
-# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
+git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # fchomo( Mihomo Kernel ) openwrt ≥ 24.10 
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
@@ -128,7 +128,7 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # helloworld（ Xray Kernel ）
-# git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
+git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 
 # xray ( Xray Kernel )
 # git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
@@ -149,7 +149,7 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 # git clone --depth=1 https://github.com/sbwml/luci-app-openlist2.git package/luci-app-openlist2
 
 # 集客 AC
-# git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/openwrt-gecoosac
+git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/openwrt-gecoosac
 
 # lucky
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
