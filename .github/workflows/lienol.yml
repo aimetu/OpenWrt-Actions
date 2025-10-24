@@ -9,7 +9,7 @@
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
 
-name: lienol.dev
+name: lienol
 
 on:
   repository_dispatch:
@@ -19,7 +19,7 @@ env:
   REPO_URL: https://github.com/Lienol/openwrt.git
   REPO_BRANCH: "24.10"
   FEEDS_CONF: Lienol/feeds.conf.default
-  CONFIG_FILE: Lienol/dev.config
+  CONFIG_FILE: Lienol/.config
   DIY_P1_SH: Lienol/diy-part1.sh
   DIY_P2_SH: Lienol/diy-part2.sh
   UPLOAD_BIN_DIR: false
