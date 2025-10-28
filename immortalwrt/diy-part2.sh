@@ -149,7 +149,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # git clone --depth=1 https://github.com/sbwml/luci-app-openlist2.git package/luci-app-openlist2
 
 # 集客 AC
-# git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/openwrt-gecoosac
+git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/openwrt-gecoosac
 
 # lucky
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
