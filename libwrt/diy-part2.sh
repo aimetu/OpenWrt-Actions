@@ -67,7 +67,7 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-fi
 # kucat theme
 git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat.git package/luci-theme-kucat
 # git clone --depth=1 https://github.com/sirpdboy/luci-app-kucat-config.git package/luci-app-kucat-config
-git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced.git package/luci-app-advanced
+git clone --depth=1 https://github.com/sirpdboy/luci-app-advancedplus.git package/luci-app-advancedplus
 
 # 更新 golang 依赖（ mosdns & alist 插件 )
 # rm -rf feeds/packages/lang/golang
