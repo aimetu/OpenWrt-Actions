@@ -75,7 +75,8 @@ git clone --depth=1 -b 25.x https://github.com/sbwml/packages_lang_golang.git  f
 rm -rf feeds/other/luci-app-adguardhome
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
-git clone --depth=1 -b lua https://github.com/sirpdboy/luci-app-adguardhome.git package/luci-app-adguardhome
+git clone --depth=1 -b dev https://github.com/stevenjoezhang/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone --depth=1 -b lua https://github.com/sirpdboy/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 -b main https://github.com/xptsp/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
@@ -83,7 +84,7 @@ git clone --depth=1 -b lua https://github.com/sirpdboy/luci-app-adguardhome.git 
 # mosdns
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/luci/applications/luci-app-mosdns
-git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns.git package/luci-app-mosdns
+git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 
 # smartdns
 # rm -rf feeds/packages/net/smartdns
@@ -112,14 +113,19 @@ git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2.git p
 rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
 git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall-packages
 
+# OpenClash（ dev 版 ）( Mihomo Kernel )
+rm -rf feeds/luci/applications/luci-app-openclash
+git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+# git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+
 # nikki( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # momo ( SingBox Kernel )
-# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
 
 # fchomo( Mihomo Kernel )
-# git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
+git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
 # nekobox( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
@@ -140,6 +146,22 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # rm -rf feeds/packages/net/openlist
 # rm -rf feeds/luci/applications/luci-app-openlist
 # git clone --depth=1 https://github.com/sbwml/luci-app-openlist2.git package/luci-app-openlist2
+
+# 集客 AC
+git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/openwrt-gecoosac
+
+# lucky
+git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
+
+# webdav ( openwrt ≥ 24.10 ) 
+# git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
+
+# luci-app-diskman
+# rm -rf feeds/luci/applications/luci-app-diskman
+# git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
+
+# filemanager
+# git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
 
 # jdCloud ax6600 led screen ctrl
 # git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
