@@ -69,8 +69,8 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-fi
 # git clone --depth=1 https://github.com/sirpdboy/luci-app-kucat-config.git package/luci-app-kucat-config
 
 # luci-theme-aurora
-git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora
-git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config.git package/luci-app-aurora-config
+# git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora
+# git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config.git package/luci-app-aurora-config
 
 # 更新 golang 依赖（ mosdns & alist 插件 )
 # rm -rf feeds/packages/lang/golang
@@ -137,7 +137,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # helloworld（ Xray Kernel ）
-git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
+# git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 
 # xray ( Xray Kernel )
 # git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
