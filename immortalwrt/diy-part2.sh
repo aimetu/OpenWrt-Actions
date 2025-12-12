@@ -63,6 +63,14 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-fi
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
+# luci-theme-kucat
+# git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat.git package/luci-theme-kucat
+# git clone --depth=1 https://github.com/sirpdboy/luci-app-kucat-config.git package/luci-app-kucat-config
+
+# luci-theme-aurora
+# git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora
+# git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config.git package/luci-app-aurora-config
+
 # 更新 golang 依赖（ mosdns & alist 插件 )
 # rm -rf feeds/packages/lang/golang
 # git clone --depth=1 -b 25.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
@@ -75,8 +83,8 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-fi
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
 git clone --depth=1 -b dev https://github.com/stevenjoezhang/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone --depth=1 -b master https://github.com/w9315273/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 -b main https://github.com/TanZhiwen2001/luci-app-adguardhome.git package/luci-app-adguardhome
-# git clone --depth=1 -b lua https://github.com/sirpdboy/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
@@ -111,14 +119,14 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 # nikki( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
-# fchomo( Mihomo Kernel ) openwrt ≥ 24.10 
+# fchomo( Mihomo Kernel  ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
 # homeproxy( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
-# momo ( SingBox Kernel ) openwrt ≥ 24.10 
+# momo ( SingBox Kernel ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
 
 # nekobox ( SingBox Kernel )
@@ -141,7 +149,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # daed
 # rm -rf feeds/packages/net/daed
 # rm -rf feeds/luci/applications/luci-app-daed
-# git clone --depth=1 -b main https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
+# git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
+# mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
 
 # openlist
 # rm -rf feeds/packages/net/openlist
