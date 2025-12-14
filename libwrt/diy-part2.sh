@@ -140,8 +140,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 
 # xray ( Xray Kernel )
-# git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
-# git clone --depth=1 https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
+git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
+git clone --depth=1 https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
 
 # 科学插件大全，移除 openwrt feeds 自带的核心包
 # rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
@@ -184,7 +184,7 @@ rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handlin
 wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
 sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
 
-# 移除 luci-app-attendedsysupgrade 软件包
+# 移除 attendedsysupgrade 软件包
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
 ./scripts/feeds update -a
