@@ -183,5 +183,8 @@ rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handlin
 wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
 sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
 
+# 移除 attendedsysupgrade 软件包
+sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
