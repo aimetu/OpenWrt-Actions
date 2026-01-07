@@ -165,8 +165,8 @@ git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/open
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # wechatpush
-# rm -rf feeds/luci/applications/luci-app-wechatpush
-# git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
+rm -rf feeds/luci/applications/luci-app-wechatpush
+git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
 
 # webdav ( openwrt ≥ 24.10 ) 
 # git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
