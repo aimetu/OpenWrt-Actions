@@ -11,7 +11,7 @@
 # https://github.com/LiBwrt/openwrt-6.x.git
 # https://github.com/davidtall/LiBwrt-openwrt-6.x.git
 # https://github.com/aimetu/openwrt-6.x.git
-name: libwrt-main
+name: libwrt
 
 on:
   repository_dispatch:
