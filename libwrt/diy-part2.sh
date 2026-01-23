@@ -75,7 +75,7 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-fi
 # 更新 golang 依赖（ mosdns & alist 插件 )
 rm -rf feeds/packages/lang/golang
 # git clone --depth=1 -b 26.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
-git clone https://github.com/kenzok8/golang -b 1.26 feeds/packages/lang/golang
+git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 # 替换 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
