@@ -71,14 +71,6 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-fi
 # git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora
 # git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config.git package/luci-app-aurora-config
 
-# 更新 golang 依赖（ mosdns & alist 插件 )
-# rm -rf feeds/packages/lang/golang
-# git clone --depth=1 -b 26.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
-
-# 替换 geodata 依赖
-# rm -rf feeds/packages/net/v2ray-geodata
-# git clone --depth=1 https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
-
 # AdguardHome
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
@@ -176,6 +168,14 @@ git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # filemanager
 # git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
+
+# 更新 golang 依赖
+rm -rf feeds/packages/lang/golang
+git clone --depth=1 -b 26.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
+
+# 更新 geodata 依赖
+# rm -rf feeds/packages/net/v2ray-geodata
+# git clone --depth=1 https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
 
 # jdCloud ax6600 led screen ctrl
 git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
