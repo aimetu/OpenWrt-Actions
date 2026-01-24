@@ -60,21 +60,28 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git packa
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
-# 更新 golang 依赖（ mosdns & alist )
-rm -rf feeds/packages/lang/golang
-git clone --depth=1 -b 25.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
+# 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
+# rm -rf feeds/luci/themes/luci-theme-argon
+# git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
-# 替换 geodata 依赖
-# rm -rf feeds/packages/net/v2ray-geodata
-# git clone --depth=1 https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
+# sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+# sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
-# adguardhome
-rm -rf feeds/other/luci-app-adguardhome
+# luci-theme-kucat
+# git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat.git package/luci-theme-kucat
+# git clone --depth=1 https://github.com/sirpdboy/luci-app-kucat-config.git package/luci-app-kucat-config
+
+# luci-theme-aurora
+# git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora
+# git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config.git package/luci-app-aurora-config
+
+# AdguardHome
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
 git clone --depth=1 -b dev https://github.com/stevenjoezhang/luci-app-adguardhome.git package/luci-app-adguardhome
-# git clone --depth=1 -b lua https://github.com/sirpdboy/luci-app-adguardhome.git package/luci-app-adguardhome
-# git clone --depth=1 -b main https://github.com/xptsp/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone --depth=1 -b master https://github.com/w9315273/luci-app-adguardhome.git package/luci-app-adguardhome
+# git clone --depth=1 -b main https://github.com/TanZhiwen2001/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 
@@ -88,15 +95,6 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # rm -rf feeds/luci/applications/luci-app-smartdns
 # git clone --depth=1 https://github.com/pymumu/openwrt-smartdns.git package/smartdns
 # git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
-
-# OpenClash（ dev 版 ）( Mihomo Kernel )
-rm -rf feeds/luci/applications/luci-app-openclash
-git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-# git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
-
-# homeproxy ( SingBox Kernel )
-rm -rf feeds/luci/applications/luci-app-homeproxy
-git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # passwall(2) ( SingBox & Xray Kernel )
 # 移除 openwrt feeds 过时的luci版本
@@ -118,26 +116,38 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 # nikki( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
-# momo ( SingBox Kernel )
-git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+# fchomo( Mihomo Kernel  ) OpenWrt ≥ 24.10
+# git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
-# fchomo( Mihomo Kernel )
-git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
+# homeproxy( SingBox Kernel )
+# rm -rf feeds/luci/applications/luci-app-homeproxy
+# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
-# nekobox( SingBox Kernel )
+# momo ( SingBox Kernel ) OpenWrt ≥ 24.10
+# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+
+# nekobox ( SingBox Kernel ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
-# neko( SingBox Kernel )
+# neko ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
+
+# helloworld（ Xray Kernel ）
+# git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
+
+# xray ( Xray Kernel )
+git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
+git clone --depth=1 https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
+
+# 科学插件大全，移除 openwrt feeds 自带的核心包
+# rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
+# git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/helloworld
 
 # daed
 # rm -rf feeds/packages/net/daed
 # rm -rf feeds/luci/applications/luci-app-daed
-# git clone --depth=1 -b main https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
-
-# 科学插件大全，移除 openwrt feeds 自带的核心包
-# rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
-# git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/helloworld
+# git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
+# mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
 
 # openlist
 # rm -rf feeds/packages/net/openlist
@@ -152,7 +162,7 @@ git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # wechatpush
 rm -rf feeds/luci/applications/luci-app-wechatpush
-git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
+git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
 
 # webdav ( openwrt ≥ 24.10 ) 
 # git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
@@ -164,16 +174,21 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-a
 # filemanager
 # git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
 
-# jdCloud ax6600 led screen ctrl
-# git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
-
-# filemanager
-# git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
-
 # luci-app-diskman
 # rm -rf feeds/other/luci-app-diskman
 # rm -rf feeds/luci/applications/luci-app-diskman
 # git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
+
+# 更新 golang 依赖
+rm -rf feeds/packages/lang/golang
+git clone --depth=1 -b 26.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
+
+# 更新 geodata 依赖
+# rm -rf feeds/packages/net/v2ray-geodata
+# git clone --depth=1 https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
+
+# jdCloud ax6600 led screen ctrl
+git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
 
 # 修复 jdCloud ax6600 无限重启
 rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
@@ -181,6 +196,9 @@ rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handlin
 # 修复 rust 报错
 wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
 sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
+
+# 移除 attendedsysupgrade 软件包
+sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
