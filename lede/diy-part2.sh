@@ -138,8 +138,8 @@ git clone --depth=1 https://github.com/sbwml/luci-app-filemanager package/luci-a
 # git clone --depth=1 https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 
 # 更新 golang 依赖
-rm -rf feeds/packages/lang/golang
-git clone --depth=1 -b 26.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
+# rm -rf feeds/packages/lang/golang
+# git clone --depth=1 -b 26.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
 
 # 更新 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
@@ -147,6 +147,9 @@ git clone --depth=1 -b 26.x https://github.com/sbwml/packages_lang_golang.git  f
 
 # jdCloud ax6600 led screen ctrl
 git clone --depth=1 https://github.com/NONGFAH/luci-app-athena-led package/luci-app-athena-led
+
+# 移除 attendedsysupgrade 软件包
+sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
