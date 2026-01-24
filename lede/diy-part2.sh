@@ -62,14 +62,6 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git packa
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
-# 更新 golang 依赖（ mosdns & alist )
-# rm -rf feeds/packages/lang/golang
-# git clone --depth=1 -b 25.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
-
-# 替换 geodata 依赖
-# rm -rf feeds/packages/net/v2ray-geodata
-# git clone --depth=1 https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
-
 # adguardhome
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-adguardhome
@@ -144,6 +136,14 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # filemanager（ 文件管理 ）
 git clone --depth=1 https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
 # git clone --depth=1 https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
+
+# 更新 golang 依赖
+rm -rf feeds/packages/lang/golang
+git clone --depth=1 -b 26.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
+
+# 更新 geodata 依赖
+# rm -rf feeds/packages/net/v2ray-geodata
+# git clone --depth=1 https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
 
 # jdCloud ax6600 led screen ctrl
 git clone --depth=1 https://github.com/NONGFAH/luci-app-athena-led package/luci-app-athena-led
