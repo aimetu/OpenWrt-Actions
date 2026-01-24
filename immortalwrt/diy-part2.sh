@@ -171,7 +171,7 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 
 # 更新 golang 依赖
 rm -rf feeds/packages/lang/golang
-git clone --depth=1 -b 26.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
+git clone --depth=1 -b 25.x https://github.com/sbwml/packages_lang_golang.git  feeds/packages/lang/golang
 
 # 更新 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
