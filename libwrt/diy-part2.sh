@@ -182,7 +182,7 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
 
 # 修复 jdCloud ax6600 无限重启
-rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
+# rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
 
 # 修复 rust 报错
 # wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
