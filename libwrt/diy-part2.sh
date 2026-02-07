@@ -191,8 +191,9 @@ sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' 
 # 移除 attendedsysupgrade 软件包
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
-# 修复 wget 报错
+# 修复报错
 wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
+wget -O feeds/packages/lang/golang/golang1.25/Makefile https://raw.githubusercontent.com/openwrt/packages/refs/heads/master/lang/golang/golang1.25/Makefile
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
