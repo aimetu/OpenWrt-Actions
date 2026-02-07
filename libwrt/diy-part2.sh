@@ -171,8 +171,8 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 # git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
 
 # 更新 golang 依赖
-# rm -rf feeds/packages/lang/golang
-# git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 # 更新 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
@@ -193,7 +193,6 @@ sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "M
 
 # 修复报错
 wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
-wget -O feeds/packages/lang/golang/golang1.25/Makefile https://raw.githubusercontent.com/openwrt/packages/refs/heads/master/lang/golang/golang1.25/Makefile
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
