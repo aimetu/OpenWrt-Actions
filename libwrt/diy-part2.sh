@@ -112,6 +112,9 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 # nikki( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
+# ssclash ( Mihomo Kernel )
+git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
+
 # fchomo( Mihomo Kernel  ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
