@@ -149,8 +149,8 @@ git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/lu
 # mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
 
 # openlist
-rm -rf feeds/packages/net/openlist
-rm -rf feeds/luci/applications/luci-app-openlist
+# rm -rf feeds/packages/net/openlist
+# rm -rf feeds/luci/applications/luci-app-openlist
 git clone --depth=1 https://github.com/sbwml/luci-app-openlist2.git package/luci-app-openlist2
 
 # 集客 AC
