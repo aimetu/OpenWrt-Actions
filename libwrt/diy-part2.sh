@@ -199,6 +199,7 @@ sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "M
 
 # 修复报错
 wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
+wget -O feeds/packages/lang/python/python3-version.mk https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3-version.mk
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
