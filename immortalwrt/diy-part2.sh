@@ -111,17 +111,23 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 # nikki( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
+# ssclash ( Mihomo Kernel )
+git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
+
 # fchomo( Mihomo Kernel  ) OpenWrt ≥ 24.10
-# git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
+git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
 # homeproxy( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
-# momo ( SingBox Kernel ) OpenWrt ≥ 24.10
-# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+# singbox-ui ( SingBox Kernel )
+git clone --depth=1 -b main https://github.com/ang3el7z/luci-app-singbox-ui.git package/luci-app-singbox-ui
 
-# nekobox ( SingBox Kernel )
+# momo ( SingBox Kernel ) OpenWrt ≥ 24.10
+git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+
+# nekobox ( SingBox Kernel ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko ( SingBox Kernel )
@@ -131,8 +137,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
 
 # xray ( Xray Kernel )
-# git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
-# git clone --depth=1 https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
+git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
+git clone --depth=1 https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
 
 # 科学插件大全，移除 openwrt feeds 自带的核心包
 # rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
@@ -171,7 +177,7 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 
 # 更新 golang 依赖
 # rm -rf feeds/packages/lang/golang
-# git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 # 更新 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
@@ -189,6 +195,9 @@ sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' 
 
 # 移除 attendedsysupgrade 软件包
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
+
+# 修复报错
+# wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
