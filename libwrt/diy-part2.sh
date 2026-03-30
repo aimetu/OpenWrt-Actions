@@ -198,7 +198,7 @@ sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' 
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
 # 修复报错
-# wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
+# wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/wget/Makefile
 wget -O feeds/packages/lang/python/python3/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/Makefile
 wget -O feeds/packages/lang/python/python3/patches/003-do-not-run-compileall.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/003-do-not-run-compileall.patch
 wget -O feeds/packages/lang/python/python3/patches/004-do-not-write-bytes-codes.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/004-do-not-write-bytes-codes.patch
