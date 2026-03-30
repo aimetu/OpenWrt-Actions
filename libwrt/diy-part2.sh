@@ -191,7 +191,7 @@ git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git p
 rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
 
 # 修复 rust 报错
-# wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
+# wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/rust/Makefile
 sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
 
 # 移除 attendedsysupgrade 软件包
@@ -200,6 +200,14 @@ sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "M
 # 修复报错
 # wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
 wget -O feeds/packages/lang/python/python3/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/Makefile
+wget -O feeds/packages/lang/python/python3/patches/003-do-not-run-compileall.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/003-do-not-run-compileall.patch
+wget -O feeds/packages/lang/python/python3/patches/004-do-not-write-bytes-codes.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/004-do-not-write-bytes-codes.patch
+wget -O feeds/packages/lang/python/python3/patches/009-don-t-run-profile-task-during-cross-build.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/009-don-t-run-profile-task-during-cross-build.patch
+wget -O feeds/packages/lang/python/python3/patches/024-musl-find_library.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/024-musl-find_library.patch
+wget -O feeds/packages/lang/python/python3/patches/025-choose-python-config-version.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/025-choose-python-config-version.patch
+wget -O feeds/packages/lang/python/python3/patches/026-openssl-feature-flags.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/026-openssl-feature-flags.patch
+wget -O feeds/packages/lang/python/python3/patches/027-fix-host-build-libressl.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/027-fix-host-build-libressl.patch
+wget -O feeds/packages/lang/python/python3/patches/100-test_hashlib-better-handle-support-for-SHA3.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/100-test_hashlib-better-handle-support-for-SHA3.patch
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
