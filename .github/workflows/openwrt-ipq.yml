@@ -9,7 +9,7 @@
 # 
 # refer https://github.com/haiibo/OpenWrt/blob/main/.github/workflows/ARMv8-Plus-OpenWrt.yml
 
-name: openwrt
+name: openwrt-ipq
 
 on:
   repository_dispatch:
@@ -31,10 +31,10 @@ env:
   OPENWRT_NAME: openwrt-ipq
   REPO_URL: https://github.com/qosmio/openwrt-ipq.git
   REPO_BRANCH: main-nss
-  FEEDS_CONF: openwrt/feeds.conf.default
-  CONFIG_FILE: openwrt/.config
-  DIY_P1_SH: openwrt/diy-part1.sh
-  DIY_P2_SH: openwrt/diy-part2.sh
+  FEEDS_CONF: openwrt-ipq/feeds.conf.default
+  CONFIG_FILE: openwrt-ipq/.config
+  DIY_P1_SH: openwrt-ipq/diy-part1.sh
+  DIY_P2_SH: openwrt-ipq/diy-part2.sh
   SSH_ACTIONS: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: false
