@@ -28,7 +28,7 @@ on:
 
 env:
   ###############手动修改##############
-  OPENWRT_NAME: openwrt
+  OPENWRT_NAME: openwrt-ipq
   REPO_URL: https://github.com/qosmio/openwrt-ipq.git
   REPO_BRANCH: main-nss
   FEEDS_CONF: openwrt/feeds.conf.default
