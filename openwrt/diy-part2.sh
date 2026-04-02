@@ -56,9 +56,9 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-openlist/root/usr/sha
 # sed -i 's/services/network/g' feeds/luci/applications/luci-app-wifischedule/root/usr/share/luci/menu.d/luci-app-wifischedule.json
 
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
-# rm -rf feeds/luci/themes/luci-theme-argon
-# git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-# git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+rm -rf feeds/luci/themes/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
@@ -112,14 +112,14 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # fchomo( Mihomo Kernel  ) OpenWrt ≥ 24.10
-# git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
+git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
 # homeproxy( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
-# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
+git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # momo ( SingBox Kernel ) OpenWrt ≥ 24.10
-# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
 
 # nekobox ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
