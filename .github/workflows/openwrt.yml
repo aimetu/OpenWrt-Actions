@@ -9,7 +9,7 @@
 # 
 # refer https://github.com/haiibo/OpenWrt/blob/main/.github/workflows/ARMv8-Plus-OpenWrt.yml
 
-name: vikingyfy
+name: openwrt
 
 on:
   repository_dispatch:
@@ -28,13 +28,13 @@ on:
 
 env:
   ###############手动修改##############
-  OPENWRT_NAME: vikingyfy
-  REPO_URL: https://github.com/VIKINGYFY/immortalwrt.git
-  REPO_BRANCH: main
-  FEEDS_CONF: vikingyfy/feeds.conf.default
-  CONFIG_FILE: vikingyfy/info.config
-  DIY_P1_SH: vikingyfy/diy-part1.sh
-  DIY_P2_SH: vikingyfy/diy-part2.sh
+  OPENWRT_NAME: openwrt
+  REPO_URL: https://github.com/qosmio/openwrt-ipq.git
+  REPO_BRANCH: main-nss
+  FEEDS_CONF: openwrt/feeds.conf.default
+  CONFIG_FILE: openwrt/info.config
+  DIY_P1_SH: openwrt/diy-part1.sh
+  DIY_P2_SH: openwrt/diy-part2.sh
   SSH_ACTIONS: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: false
