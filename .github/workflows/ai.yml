@@ -23,11 +23,13 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-schedule:
-  - cron: 0 12 * * 7
+        
+on:
+  # 定时任务
+  schedule:
+    - cron: 0 12 * * 7
 
 env:
-  ###############手动修改##############
   OPENWRT_NAME: libwrt
   REPO_URL: https://github.com/aimetu/openwrt-6.x.git
   REPO_BRANCH: main-nss
