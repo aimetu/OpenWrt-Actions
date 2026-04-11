@@ -23,8 +23,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-#  schedule:
-#    - cron: 0 0 1 * *
+schedule:
+  - cron: 0 12 * * 7
 
 env:
   ###############手动修改##############
@@ -37,7 +37,7 @@ env:
   DIY_P2_SH: libwrt/diy-part2.sh
   SSH_ACTIONS: false
   UPLOAD_FIRMWARE: true
-  UPLOAD_RELEASE: false
+  UPLOAD_RELEASE: true
   CACHE_TOOLCHAIN: true
   TZ: Asia/Shanghai
 
