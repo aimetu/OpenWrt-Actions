@@ -1,8 +1,8 @@
 name: delete-older-releases
 on:
   workflow_dispatch:
-  schedule:
-    - cron: 0 0 1 1-12 *
+  # schedule:
+  #   - cron: 0 0 1 1-12 *
     
 jobs:
   del_runs:
