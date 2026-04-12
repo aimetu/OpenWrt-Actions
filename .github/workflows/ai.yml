@@ -24,8 +24,8 @@ on:
         required: false
         default: 'false'
   # 定时任务
-  schedule:
-    - cron: 0 0 * 1-12 1/7 # 从一月到十二月，每个月的星期一到星期日， 每周的第七天
+  # schedule:
+  #   - cron: 0 0 * 1-12 1/7 # 从一月到十二月，每个月的星期一到星期日， 每周的第七天
 
 env:
   OPENWRT_NAME: libwrt
