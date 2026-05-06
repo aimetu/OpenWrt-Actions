@@ -116,7 +116,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
 
 # fchomo( Mihomo Kernel  ) OpenWrt ≥ 24.10
-git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
+# git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
 # homeproxy( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
