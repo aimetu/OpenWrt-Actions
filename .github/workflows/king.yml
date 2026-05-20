@@ -9,7 +9,7 @@
 # 
 # refer https://github.com/haiibo/OpenWrt/blob/main/.github/workflows/ARMv8-Plus-OpenWrt.yml
 
-name: libwrt-25.12
+name: king-6.18
 
 on:
   repository_dispatch:
@@ -24,17 +24,17 @@ on:
         required: false
         default: 'false'
 #  schedule:
-#    - cron: 0 0 1 * *
+#    - cron: 0 18 * * *
 
 env:
   ###############手动修改##############
-  OPENWRT_NAME: libwrt-25.12
-  REPO_URL: https://github.com/LiBwrt/openwrt-6.x.git
-  REPO_BRANCH: 25.12-nss
-  FEEDS_CONF: libwrt/feeds-25.12.conf.default
-  CONFIG_FILE: libwrt/info.config
-  DIY_P1_SH: libwrt/diy-part1.sh
-  DIY_P2_SH: libwrt/diy-part2.sh
+  OPENWRT_NAME: king
+  REPO_URL: https://github.com/VIKINGYFY/immortalwrt
+  REPO_BRANCH: main
+  FEEDS_CONF: immortalwrt/feeds.conf.default
+  CONFIG_FILE: immortalwrt/info.config
+  DIY_P1_SH: immortalwrt/diy-part1.sh
+  DIY_P2_SH: immortalwrt/diy-part2.sh
   SSH_ACTIONS: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: false
