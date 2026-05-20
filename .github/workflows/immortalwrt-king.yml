@@ -31,8 +31,8 @@ env:
   OPENWRT_NAME: king
   REPO_URL: https://github.com/VIKINGYFY/immortalwrt
   REPO_BRANCH: main
-  FEEDS_CONF: immortalwrt/feeds-6.18.conf.default
-  CONFIG_FILE: immortalwrt/info.config
+  FEEDS_CONF: immortalwrt/feeds-king.conf.default
+  CONFIG_FILE: immortalwrt/.config
   DIY_P1_SH: immortalwrt/diy-part1.sh
   DIY_P2_SH: immortalwrt/diy-part2.sh
   SSH_ACTIONS: false
