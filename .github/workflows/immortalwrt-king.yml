@@ -9,7 +9,7 @@
 # 
 # refer https://github.com/haiibo/OpenWrt/blob/main/.github/workflows/ARMv8-Plus-OpenWrt.yml
 
-name: immortalwrt-king-6.18
+name: immortalwrt-king
 
 on:
   repository_dispatch:
