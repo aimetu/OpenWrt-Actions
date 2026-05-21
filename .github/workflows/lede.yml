@@ -32,7 +32,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede.git
   REPO_BRANCH: master
   FEEDS_CONF: lede/feeds.conf.default
-  CONFIG_FILE: lede/info.config
+  CONFIG_FILE: lede/.config
   DIY_P1_SH: lede/diy-part1.sh
   DIY_P2_SH: lede/diy-part2.sh
   SSH_ACTIONS: false
