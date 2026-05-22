@@ -161,6 +161,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 # git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/openwrt-gecoosac
 
 # lucky
+rm -rf feeds/luci/applications/luci-app-lucky
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # wechatpush
