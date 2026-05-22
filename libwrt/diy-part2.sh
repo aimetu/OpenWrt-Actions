@@ -57,10 +57,10 @@ sed -i 's/services/nas/g' feeds/luci/applications/luci-app-openlist/root/usr/sha
 # sed -i 's/services/network/g' feeds/luci/applications/luci-app-wifischedule/root/usr/share/luci/menu.d/luci-app-wifischedule.json
 
 # 取消 bootstrap 为默认主题，添加 argon 主题设置为默认
-rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-argon-config
-git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+# rm -rf feeds/luci/themes/luci-theme-argon
+# rm -rf feeds/luci/applications/luci-app-argon-config
+# git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
@@ -199,17 +199,17 @@ sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' 
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
 # 修复报错
-wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/wget/Makefile
-wget -O feeds/packages/lang/python/python3-version.mk https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python/python3-version.mk
-wget -O feeds/packages/lang/python/python3/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/Makefile
-wget -O feeds/packages/lang/python/python3/patches/003-do-not-run-compileall.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/003-do-not-run-compileall.patch
-wget -O feeds/packages/lang/python/python3/patches/004-do-not-write-bytes-codes.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/004-do-not-write-bytes-codes.patch
-wget -O feeds/packages/lang/python/python3/patches/009-don-t-run-profile-task-during-cross-build.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/009-don-t-run-profile-task-during-cross-build.patch
-wget -O feeds/packages/lang/python/python3/patches/024-musl-find_library.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/024-musl-find_library.patch
-wget -O feeds/packages/lang/python/python3/patches/025-choose-python-config-version.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/025-choose-python-config-version.patch
-wget -O feeds/packages/lang/python/python3/patches/026-openssl-feature-flags.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/026-openssl-feature-flags.patch
-wget -O feeds/packages/lang/python/python3/patches/027-fix-host-build-libressl.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/027-fix-host-build-libressl.patch
-wget -O feeds/packages/lang/python/python3/patches/100-test_hashlib-better-handle-support-for-SHA3.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/100-test_hashlib-better-handle-support-for-SHA3.patch
+# wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/wget/Makefile
+# wget -O feeds/packages/lang/python/python3-version.mk https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python/python3-version.mk
+# wget -O feeds/packages/lang/python/python3/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/Makefile
+# wget -O feeds/packages/lang/python/python3/patches/003-do-not-run-compileall.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/003-do-not-run-compileall.patch
+# wget -O feeds/packages/lang/python/python3/patches/004-do-not-write-bytes-codes.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/004-do-not-write-bytes-codes.patch
+# wget -O feeds/packages/lang/python/python3/patches/009-don-t-run-profile-task-during-cross-build.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/009-don-t-run-profile-task-during-cross-build.patch
+# wget -O feeds/packages/lang/python/python3/patches/024-musl-find_library.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/024-musl-find_library.patch
+# wget -O feeds/packages/lang/python/python3/patches/025-choose-python-config-version.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/025-choose-python-config-version.patch
+# wget -O feeds/packages/lang/python/python3/patches/026-openssl-feature-flags.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/026-openssl-feature-flags.patch
+# wget -O feeds/packages/lang/python/python3/patches/027-fix-host-build-libressl.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/027-fix-host-build-libressl.patch
+# wget -O feeds/packages/lang/python/python3/patches/100-test_hashlib-better-handle-support-for-SHA3.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/100-test_hashlib-better-handle-support-for-SHA3.patch
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
