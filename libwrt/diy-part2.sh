@@ -124,7 +124,7 @@ git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/lu
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # singbox-ui ( SingBox Kernel )
-# git clone --depth=1 -b main https://github.com/ang3el7z/luci-app-singbox-ui.git package/luci-app-singbox-ui
+git clone --depth=1 -b main https://github.com/ang3el7z/luci-app-singbox-ui.git package/luci-app-singbox-ui
 
 # momo ( SingBox Kernel ) OpenWrt ≥ 24.10
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
@@ -186,7 +186,8 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 # git clone --depth=1 https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
 
 # jdCloud ax6600 led screen ctrl
-git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
+# git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
+git clone --depth=1 -b LuCI2-JS https://github.com/Sh1rokoDev/luci-app-athena-led.git package/luci-app-athena-led
 
 # 修复 jdCloud ax6600 无限重启
 rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
