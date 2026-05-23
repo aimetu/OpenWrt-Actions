@@ -9,7 +9,7 @@
 # 
 # refer https://github.com/haiibo/OpenWrt/blob/main/.github/workflows/ARMv8-Plus-OpenWrt.yml
 
-name: ai
+name: openwrt-6.x
 
 on:
   repository_dispatch:
@@ -29,7 +29,7 @@ on:
 
 env:
   OPENWRT_NAME: libwrt
-  REPO_URL: https://github.com/aimetu/ax6600.git # https://github.com/aimetu/openwrt-6.x.git
+  REPO_URL: https://github.com/aimetu/openwrt-6.x.git
   REPO_BRANCH: main-nss
   FEEDS_CONF: libwrt/feeds.conf.default
   CONFIG_FILE: libwrt/info.config
