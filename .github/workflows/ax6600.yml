@@ -29,7 +29,7 @@ on:
 
 env:
   OPENWRT_NAME: libwrt
-  REPO_URL: https://github.com/napolun88/openwrt-6.x.git # https://github.com/aimetu/ax6600.git
+  REPO_URL: https://github.com/aimetu/ax6600-6.8.git
   REPO_BRANCH: main-nss
   FEEDS_CONF: libwrt/feeds.conf.default
   CONFIG_FILE: libwrt/info.config
