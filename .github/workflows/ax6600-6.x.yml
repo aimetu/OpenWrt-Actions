@@ -9,7 +9,7 @@
 # 
 # refer https://github.com/haiibo/OpenWrt/blob/main/.github/workflows/ARMv8-Plus-OpenWrt.yml
 
-name: ax6600
+name: ax6600-6.x
 
 on:
   repository_dispatch:
@@ -28,7 +28,7 @@ on:
   #   - cron: 0 0 * 1-12 1/7 # 从一月到十二月，每个月的星期一到星期日， 每周的第七天
 
 env:
-  OPENWRT_NAME: libwrt
+  OPENWRT_NAME: libwrt-6.12.68
   REPO_URL: https://github.com/aimetu/ax6600-6.8.git
   REPO_BRANCH: main-nss
   FEEDS_CONF: libwrt/feeds.conf.default
