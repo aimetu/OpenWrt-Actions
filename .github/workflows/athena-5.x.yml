@@ -9,7 +9,7 @@
 # 
 # refer https://github.com/haiibo/OpenWrt/blob/main/.github/workflows/ARMv8-Plus-OpenWrt.yml
 
-name: athena-6.x
+name: athena-5.x
 
 on:
   repository_dispatch:
@@ -28,8 +28,8 @@ on:
   #   - cron: 0 0 * 1-12 1/7 # 从一月到十二月，每个月的星期一到星期日， 每周的第七天
 
 env:
-  OPENWRT_NAME: libwrt-6.x
-  REPO_URL: https://github.com/aimetu/openwrt-6.x.git
+  OPENWRT_NAME: libwrt-5.x
+  REPO_URL: https://github.com/aimetu/openwrt-5.x.git
   REPO_BRANCH: main-nss
   FEEDS_CONF: libwrt/feeds.conf.default
   CONFIG_FILE: libwrt/info.config
