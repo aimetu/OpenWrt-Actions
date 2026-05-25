@@ -104,6 +104,7 @@ jobs:
       
     - name: 下载固件源码
       run: |
+        rm -rf openwrt
         df -hT $GITHUB_WORKSPACE
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
