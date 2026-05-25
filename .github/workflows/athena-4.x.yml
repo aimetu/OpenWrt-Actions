@@ -9,7 +9,7 @@
 # 
 # refer https://github.com/haiibo/OpenWrt/blob/main/.github/workflows/ARMv8-Plus-OpenWrt.yml
 
-name: ax6600-4.x
+name: athena-4.x
 
 on:
   repository_dispatch:
@@ -29,7 +29,7 @@ on:
 
 env:
   OPENWRT_NAME: libwrt-4.x
-  REPO_URL: https://github.com/aimetu/ax6600-4.0.git
+  REPO_URL: https://github.com/aimetu/openwrt-4.x.git
   REPO_BRANCH: main-nss
   FEEDS_CONF: libwrt/feeds.conf.default
   CONFIG_FILE: libwrt/info.config
