@@ -9,7 +9,7 @@
 # 
 # refer https://github.com/haiibo/OpenWrt/blob/main/.github/workflows/ARMv8-Plus-OpenWrt.yml
 
-name: athena-6.x
+name: ax6600-6.x
 
 on:
   repository_dispatch:
