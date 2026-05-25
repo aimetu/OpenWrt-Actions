@@ -60,8 +60,8 @@ rm -rf feeds/luci/themes/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
-sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
+# sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+# sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
 # luci-theme-kucat
 # git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat.git package/luci-theme-kucat
@@ -111,21 +111,27 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 # nikki( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
+# ssclash ( Mihomo Kernel )
+git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
+
 # fchomo( Mihomo Kernel  ) OpenWrt ≥ 24.10
-git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
+# git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
 
 # homeproxy( SingBox Kernel )
-# rm -rf feeds/luci/applications/luci-app-homeproxy
+rm -rf feeds/luci/applications/luci-app-homeproxy
 git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
+
+# singbox-ui ( SingBox Kernel )
+# git clone --depth=1 -b main https://github.com/ang3el7z/luci-app-singbox-ui.git package/luci-app-singbox-ui
 
 # momo ( SingBox Kernel ) OpenWrt ≥ 24.10
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
 
-# nekobox ( SingBox Kernel )
+# nekobox ( SingBox Kernel ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
 
 # neko ( SingBox Kernel )
-git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
+# git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # helloworld（ Xray Kernel ）
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/helloworld
@@ -153,6 +159,7 @@ git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git packag
 # git clone --depth=1 https://github.com/lwb1978/openwrt-gecoosac.git package/openwrt-gecoosac
 
 # lucky
+rm -rf feeds/luci/applications/luci-app-lucky
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # wechatpush
@@ -163,28 +170,29 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 # git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
 
 # luci-app-diskman
-rm -rf feeds/luci/applications/luci-app-diskman
-git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
+# rm -rf feeds/luci/applications/luci-app-diskman
+# git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
 
 # filemanager
 # git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
 
 # 更新 golang 依赖
 # rm -rf feeds/packages/lang/golang
-# git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 
 # 更新 geodata 依赖
 # rm -rf feeds/packages/net/v2ray-geodata
 # git clone --depth=1 https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
 
 # jdCloud ax6600 led screen ctrl
-git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
+#git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
+git clone --depth=1 -b LuCI2-JS https://github.com/Sh1rokoDev/luci-app-athena-led.git package/luci-app-athena-led
 
 # 修复 jdCloud ax6600 无限重启
 rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
 
 # 修复 rust 报错
-# wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/Makefile
+# wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/rust/Makefile
 sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
 
 # 移除 attendedsysupgrade 软件包
