@@ -182,8 +182,10 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 # git clone --depth=1 https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
 
 # jdCloud ax6600 led screen ctrl
+rm -rf package/emortal/luci-app-athena-led
+git clone --depth=1 -b main https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller.git package/luci-app-athena-led
 # git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
-git clone --depth=1 -b LuCI2-JS https://github.com/Sh1rokoDev/luci-app-athena-led.git package/luci-app-athena-led
+# git clone --depth=1 -b LuCI2-JS https://github.com/Sh1rokoDev/luci-app-athena-led.git package/luci-app-athena-led
 
 # 修复 jdCloud ax6600 无限重启
 # rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
