@@ -32,7 +32,7 @@ env:
   REPO_URL: https://github.com/LiBwrt/openwrt-6.x.git
   REPO_BRANCH: 25.12-nss
   FEEDS_CONF: libwrt/feeds-25.conf.default
-  CONFIG_FILE: libwrt/.config
+  CONFIG_FILE: libwrt/info.config
   DIY_P1_SH: libwrt/diy-part1.sh
   DIY_P2_SH: libwrt/diy-part2.sh
   SSH_ACTIONS: false
