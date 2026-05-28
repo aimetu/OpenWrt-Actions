@@ -28,9 +28,9 @@ on:
   #   - cron: 0 0 * 1-12 1/7 # 从一月到十二月，每个月的星期一到星期日， 每周的第七天
 
 env:
-  OPENWRT_NAME: libwrt-6.x
-  REPO_URL: https://github.com/dongfengweixiao/openwrt-6.x.git # https://github.com/aimetu/openwrt-6.x.git
-  REPO_BRANCH: k6.12-nss # main-nss
+  OPENWRT_NAME: libwrt-4.5
+  REPO_URL: https://github.com/aimetu/openwrt-4.5.git
+  REPO_BRANCH: main-nss
   FEEDS_CONF: libwrt/feeds.conf.default
   CONFIG_FILE: libwrt/info.config
   DIY_P1_SH: libwrt/diy-part1.sh
