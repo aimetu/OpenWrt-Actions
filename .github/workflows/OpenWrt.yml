@@ -28,11 +28,11 @@ on:
 
 env:
   ###############手动修改##############
-  OPENWRT_NAME: OpenWrt-6.x
-  REPO_URL: https://github.com/King-Of-Knights/openwrt-6.x.git
+  OPENWRT_NAME: OpenWrt
+  REPO_URL: https://github.com/openwrt/openwrt.git
   REPO_BRANCH: main
   FEEDS_CONF: OpenWrt/feeds.conf.default
-  CONFIG_FILE: OpenWrt/info.config
+  CONFIG_FILE: OpenWrt/.config
   DIY_P1_SH: OpenWrt/diy-part1.sh
   DIY_P2_SH: OpenWrt/diy-part2.sh
   SSH_ACTIONS: false
