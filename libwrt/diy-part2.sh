@@ -200,7 +200,8 @@ sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' 
 # 移除 attendedsysupgrade 软件包
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
-# 修复报错
+# 修复
+wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/ath11k-firmware/Makefile
 # wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/wget/Makefile
 # wget -O feeds/packages/lang/python/python3-version.mk https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python/python3-version.mk
 # wget -O feeds/packages/lang/python/python3/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/Makefile
