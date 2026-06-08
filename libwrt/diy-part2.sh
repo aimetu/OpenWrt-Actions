@@ -95,15 +95,11 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # passwall(2) ( SingBox & Xray Kernel )
-# 移除 openwrt feeds 过时的luci版本
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall2
+rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,v2ray-plugin,xray-plugin,geoview,shadow-tls}
 git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall.git package/luci-app-passwall
 git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall2.git package/luci-app-passwall2
-
-# 移除 openwrt feeds 自带的核心库
-# rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
-rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
 git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git package/passwall-packages
 
 # OpenClash（ dev 版 ）( Mihomo Kernel )
