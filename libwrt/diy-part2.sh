@@ -165,9 +165,6 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 # easytier
 git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
 
-# luci-app-turboacc
-git clone --depth=1 https://github.com/chenmozhijin/turboacc.git package/luci-app-turboacc
-
 # webdav ( openwrt ≥ 24.10 ) 
 # git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
 
