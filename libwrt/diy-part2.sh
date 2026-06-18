@@ -162,10 +162,6 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 # easytier
 git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
 
-# ddns-go
-rm -rf feeds/luci/applications/luci-app-ddns-go
-git clone --depth=1 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
-
 # webdav ( openwrt ≥ 24.10 ) 
 # git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
 
