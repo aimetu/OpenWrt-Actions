@@ -66,10 +66,6 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config.git packa
 # sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
 
-# luci-theme-kucat
-# git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat.git package/luci-theme-kucat
-# git clone --depth=1 https://github.com/sirpdboy/luci-app-kucat-config.git package/luci-app-kucat-config
-
 # luci-theme-aurora
 # git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora
 # git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config.git package/luci-app-aurora-config
@@ -165,6 +161,10 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 
 # easytier
 git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
+
+# ddns-go
+rm -rf feeds/luci/applications/luci-app-ddns-go
+git clone --depth=1 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
 
 # webdav ( openwrt ≥ 24.10 ) 
 # git clone --depth=1 -b openwrt-24.10 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
