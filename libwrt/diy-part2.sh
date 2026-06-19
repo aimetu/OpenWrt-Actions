@@ -129,8 +129,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # helloworld（ Xray Kernel ）
-rm -rf package/helloworld/mosdns
-git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/helloworld
+# rm -rf package/helloworld/mosdns
+# git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/helloworld
 
 # xray ( Xray Kernel )
 # git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
@@ -152,8 +152,8 @@ git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/hello
 # git clone --depth=1 https://github.com/sbwml/luci-app-openlist2.git package/luci-app-openlist2
 
 # lucky
-# rm -rf feeds/luci/applications/luci-app-lucky
-# git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
+rm -rf feeds/luci/applications/luci-app-lucky
+git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # wechatpush
 rm -rf feeds/luci/applications/luci-app-wechatpush
