@@ -163,7 +163,7 @@ git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/lu
 git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/luci-app-easytier
 
 # webdav ( openwrt ≥ 24.10 ) 
-git clone --depth=1 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
+# git clone --depth=1 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
 
 # luci-app-diskman
 # rm -rf feeds/luci/applications/luci-app-diskman
