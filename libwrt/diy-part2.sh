@@ -133,8 +133,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 # git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/helloworld
 
 # xray ( Xray Kernel )
-git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
-git clone --depth=1 https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
+# git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
+# git clone --depth=1 https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
 
 # 科学插件大全，移除 openwrt feeds 自带的核心包
 # rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
