@@ -129,7 +129,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
 
 # helloworld（ Xray Kernel ）
-rm -rf package/helloworld/mosdns
+rm -rf package/helloworld/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
 git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/helloworld
 
 # xray ( Xray Kernel )
