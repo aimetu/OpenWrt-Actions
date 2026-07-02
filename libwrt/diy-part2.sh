@@ -133,7 +133,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 
 # helloworld（ Xray Kernel ）
 rm -rf package/helloworld/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
-git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/helloworld
+git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/openwrt-helloworld
 
 # xray ( Xray Kernel )
 # git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
@@ -141,7 +141,7 @@ git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/hello
 
 # 科学插件大全，移除 openwrt feeds 自带的核心包
 # rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
-# git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/helloworld
+# git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/openwrt_helloworld
 
 # daed ( 修改内核大小为12M ）
 sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
@@ -150,6 +150,7 @@ rm -rf feeds/packages/net/daed
 rm -rf feeds/luci/applications/luci-app-dae
 rm -rf feeds/luci/applications/luci-app-daed
 git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt-daede
+# git clone --depth=1 git clone https://github.com/QiuSimons/luci-app-daed.git package/openwrt-dae
 
 # openlist
 # rm -rf feeds/packages/net/openlist
@@ -158,7 +159,7 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt
 
 # lucky
 rm -rf feeds/luci/applications/luci-app-lucky
-git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/lucky
+git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/openwrt-lucky
 
 # wechatpush
 rm -rf feeds/luci/applications/luci-app-wechatpush
