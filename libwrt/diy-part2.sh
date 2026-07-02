@@ -146,8 +146,7 @@ git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/hello
 # daed
 # rm -rf feeds/packages/net/daed
 # rm -rf feeds/luci/applications/luci-app-daed
-# git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
-# mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
+git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt-daede
 
 # openlist
 # rm -rf feeds/packages/net/openlist
