@@ -145,11 +145,11 @@ git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/hello
 
 # daed ( 修改内核大小为12M ）
 sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
-rm -rf feeds/packages/net/dae
-rm -rf feeds/packages/net/daed
-rm -rf feeds/luci/applications/luci-app-dae
-rm -rf feeds/luci/applications/luci-app-daed
-git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt-daede
+# rm -rf feeds/packages/net/dae
+# rm -rf feeds/packages/net/daed
+# rm -rf feeds/luci/applications/luci-app-dae
+# rm -rf feeds/luci/applications/luci-app-daed
+# git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt-daede
 
 # openlist
 # rm -rf feeds/packages/net/openlist
