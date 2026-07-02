@@ -145,11 +145,11 @@ git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/hello
 
 # daed ( 修改内核大小为12M ）
 sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
-rm -rf feeds/packages/net/dae
-rm -rf feeds/packages/net/daed
-rm -rf feeds/luci/applications/luci-app-dae
-rm -rf feeds/luci/applications/luci-app-daed
-git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt-daede
+# rm -rf feeds/packages/net/dae
+# rm -rf feeds/packages/net/daed
+# rm -rf feeds/luci/applications/luci-app-dae
+# rm -rf feeds/luci/applications/luci-app-daed
+# git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt-daede
 
 # openlist
 # rm -rf feeds/packages/net/openlist
@@ -204,7 +204,7 @@ sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "M
 # 修复
 wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/ath11k-firmware/Makefile
 # wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/immortalwrt/immortalwrt/refs/heads/master/package/firmware/ath11k-firmware/Makefile
-wget -O package/feeds/packages/node-pnpm/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/lang/node/node-pnpm/Makefile
+# wget -O package/feeds/packages/node-pnpm/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/lang/node/node-pnpm/Makefile
 # wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/wget/Makefile
 # wget -O feeds/packages/lang/python/python3-version.mk https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python/python3-version.mk
 # wget -O feeds/packages/lang/python/python3/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/Makefile
