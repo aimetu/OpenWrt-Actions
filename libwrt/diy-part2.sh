@@ -91,8 +91,7 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # passwall(2) ( SingBox & Xray Kernel )
-rm -rf feeds/luci/applications/luci-app-passwall
-rm -rf feeds/luci/applications/luci-app-passwall2
+rm -rf feeds/luci/applications/{luci-app-passwall,luci-app-passwall2}
 rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,v2ray-plugin,xray-plugin,geoview,shadow-tls}
 git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall.git package/luci-app-passwall
 git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall2.git package/luci-app-passwall2
@@ -145,11 +144,9 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 
 # daed ( 修改内核大小为12M ）
 sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
-# rm -rf feeds/packages/net/dae
-# rm -rf feeds/packages/net/daed
-# rm -rf feeds/luci/applications/luci-app-dae
-# rm -rf feeds/luci/applications/luci-app-daed
-# git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt-daede
+rm -rf feeds/packages/net/{dae,daed}
+rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
+git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt-daede
 # git clone --depth=1 git clone https://github.com/QiuSimons/luci-app-daed.git package/openwrt-dae
 
 # openlist
