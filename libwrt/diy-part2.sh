@@ -41,7 +41,7 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-fi
 # sed -i "s/disabled='${defaults ? 0 : 1}'/disabled='0'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
 # 更换 Kernel 内核版本
-# sed -i "s/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.1/g" target/linux/qualcommax/Makefile
+# sed -i "s/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g" target/linux/qualcommax/Makefile
 
 # samba 解除 root 限制
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
@@ -97,24 +97,24 @@ git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall
 git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall2.git package/luci-app-passwall2
 git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git package/passwall-packages
 
-# OpenClash（ dev 版 ）( Mihomo Kernel )
+# OpenClash ( Mihomo Kernel )
 rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
-# nikki( Mihomo Kernel )
+# nikki ( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
-# clashoo( Mihomo Kernel )
+# clashoo ( Mihomo Kernel )
 git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
 
 # ssclash ( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
 
-# fchomo( Mihomo Kernel  ) OpenWrt ≥ 24.10
+# fchomo ( Mihomo Kernel  ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/luci-app-fchomo
 
-# homeproxy( SingBox Kernel )
+# homeproxy ( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
@@ -130,7 +130,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 # neko ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/luci-app-neko
 
-# helloworld（ Xray Kernel ）
+# helloworld（ Mihomo & Xray Kernel ）
 git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
 rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
 
@@ -138,7 +138,7 @@ rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v
 # git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
 # git clone --depth=1 https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
 
-# 科学插件大全，移除 openwrt feeds 自带的核心包
+# Proxy in 1（ Mihomo & SingBox & Xray Kernel ）
 # rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 # git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/openwrt_helloworld
 
@@ -148,6 +148,19 @@ sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/
 # rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
 # git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
 # git clone --depth=1 git clone https://github.com/QiuSimons/luci-app-daed.git package/luci-app-dae
+
+# jdCloud ax6600 led screen ctrl
+rm -rf package/emortal/luci-app-athena-led
+git clone --depth=1 -b main https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller.git package/luci-app-athena-led
+# git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
+# git clone --depth=1 -b LuCI2-JS https://github.com/Sh1rokoDev/luci-app-athena-led.git package/luci-app-athena-led
+
+# luci-app-diskman
+# rm -rf feeds/luci/applications/luci-app-diskman
+# git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
+
+# filemanager
+# git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
 
 # openlist
 # rm -rf feeds/packages/net/openlist
@@ -168,42 +181,29 @@ git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/lu
 # webdav ( openwrt ≥ 24.10 ) 
 # git clone --depth=1 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
 
-# luci-app-diskman
-# rm -rf feeds/luci/applications/luci-app-diskman
-# git clone --depth=1 https://github.com/lisaac/luci-app-diskman.git package/luci-app-diskman
-
-# filemanager
-# git clone --depth=1 -b main https://github.com/sbwml/luci-app-filemanager.git package/luci-app-filemanager
-
-# 更新 golang 依赖
+# 升级 golang 核心
 # rm -rf feeds/packages/lang/golang
 # git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 
-# 更新 geodata 依赖
+# 升级 geodata 核心
 # rm -rf feeds/packages/net/v2ray-geodata
 # git clone --depth=1 https://github.com/sbwml/v2ray-geodata.git package/v2ray-geodata
-
-# jdCloud ax6600 led screen ctrl
-rm -rf package/emortal/luci-app-athena-led
-git clone --depth=1 -b main https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller.git package/luci-app-athena-led
-# git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
-# git clone --depth=1 -b LuCI2-JS https://github.com/Sh1rokoDev/luci-app-athena-led.git package/luci-app-athena-led
 
 # 修复 jdCloud ax6600 无限重启
 rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handling.patch
 
-# 修复 rust 报错
-# wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/rust/Makefile
-sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
-
 # 移除 attendedsysupgrade 软件包
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
-# 修复
+# 修复云编译报错
+sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
+
+# 修复编译报错
 wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/ath11k-firmware/Makefile
 # wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/immortalwrt/immortalwrt/refs/heads/master/package/firmware/ath11k-firmware/Makefile
-# wget -O package/feeds/packages/node-pnpm/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/lang/node/node-pnpm/Makefile
+# wget -O feeds/packages/lang/node/node-pnpm/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/lang/node/node-pnpm/Makefile
 # wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/wget/Makefile
+# wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/rust/Makefile
 # wget -O feeds/packages/lang/python/python3-version.mk https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python/python3-version.mk
 # wget -O feeds/packages/lang/python/python3/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/Makefile
 # wget -O feeds/packages/lang/python/python3/patches/003-do-not-run-compileall.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/003-do-not-run-compileall.patch
