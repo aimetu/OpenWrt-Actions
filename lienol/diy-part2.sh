@@ -37,7 +37,7 @@ sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 # 更换 bin 固件内核大小
 # sed -i "s/factory.bin recovery.bin/factory.bin sysupgrade.bin/g" target/linux/qualcommax/image/ipq60xx.mk
-# sed -i "s/pad-to 12288k/pad-to 6144k/g" target/linux/qualcommax/image/ipq60xx.mk
+# sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
 
 # samba 解除 root 限制
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
@@ -137,7 +137,7 @@ rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v
 # git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/openwrt_helloworld
 
 # daed ( 修改内核大小为12M ）
-sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
+# sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
 # rm -rf feeds/packages/net/{dae,daed}
 # rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
 # git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
