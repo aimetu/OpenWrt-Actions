@@ -87,7 +87,7 @@ git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-
 # smartdns
 # rm -rf feeds/packages/net/smartdns
 # rm -rf feeds/luci/applications/luci-app-smartdns
-# git clone --depth=1 https://github.com/pymumu/openwrt-smartdns.git package/smartdns
+# git clone --depth=1 https://github.com/pymumu/openwrt-smartdns.git package/openwrt-smartdns
 # git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # passwall(2) ( SingBox & Xray Kernel )
@@ -106,13 +106,13 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # clashoo( Mihomo Kernel )
-git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/openwrt-clashoo
+git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
 
 # ssclash ( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
 
 # fchomo( Mihomo Kernel  ) OpenWrt ≥ 24.10
-# git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/openwrt-fchomo
+# git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/luci-app-fchomo
 
 # homeproxy( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
@@ -125,14 +125,14 @@ git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/lu
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
 
 # nekobox ( SingBox Kernel ) OpenWrt ≥ 24.10
-# git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/openwrt-nekobox
+# git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/luci-app-nekobox
 
 # neko ( SingBox Kernel )
-# git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/openwrt-neko
+# git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/luci-app-neko
 
 # helloworld（ Xray Kernel ）
-# rm -rf package/helloworld/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
-# git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/openwrt-helloworld
+git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
+rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
 
 # xray ( Xray Kernel )
 # git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
@@ -146,8 +146,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
 rm -rf feeds/packages/net/{dae,daed}
 rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
-git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt-daede
-# git clone --depth=1 git clone https://github.com/QiuSimons/luci-app-daed.git package/openwrt-dae
+git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
+# git clone --depth=1 git clone https://github.com/QiuSimons/luci-app-daed.git package/luci-app-dae
 
 # openlist
 # rm -rf feeds/packages/net/openlist
@@ -156,7 +156,7 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/openwrt
 
 # lucky
 rm -rf feeds/luci/applications/luci-app-lucky
-git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/openwrt-lucky
+git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
 
 # wechatpush
 rm -rf feeds/luci/applications/luci-app-wechatpush
