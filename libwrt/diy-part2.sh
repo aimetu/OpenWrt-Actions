@@ -27,8 +27,8 @@ sed -i "s/LibWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/m
 sed -i "s/ImmortalWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
 # 修改 wifi 无线名称 & 密码
-sed -i "s/BASE_SSID='.*'/BASE_SSID='OpenWrt'/g" target/linux/qualcommax/base-files/etc/uci-defaults/990_set-wireless.sh
-sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" target/linux/qualcommax/base-files/etc/uci-defaults/990_set-wireless.sh
+sed -i "s/BASE_SSID='.*'/BASE_SSID='OpenWrt'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
 # 最大连接数修改为 65535
 # sed -i "s/nf_conntrack_max=.*/nf_conntrack_max=65535/g" package/kernel/linux/files/sysctl-nf-conntrack.conf
