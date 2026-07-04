@@ -118,6 +118,9 @@ git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/lu
 # rm -rf feeds/luci/applications/luci-app-homeproxy
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
+# homeproxy-hiddify ( SingBox Kernel )
+git clone --depth=1 https://github.com/1andrevich/homeproxy-hiddify.git package/luci-app-re-homeproxy
+
 # singbox-ui ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/ang3el7z/luci-app-singbox-ui.git package/luci-app-singbox-ui
 
