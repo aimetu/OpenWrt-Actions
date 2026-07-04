@@ -149,8 +149,8 @@ rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v
 sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
 rm -rf feeds/packages/net/{dae,daed}
 rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
-# git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
-git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
+git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
+# git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
 
 # jdCloud ax6600 led screen ctrl
 rm -rf package/emortal/luci-app-athena-led
