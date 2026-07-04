@@ -119,7 +119,7 @@ git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/lu
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # homeproxy-hiddify ( SingBox Kernel )
-git clone --depth=1 https://github.com/1andrevich/homeproxy-hiddify.git package/luci-app-re-homeproxy
+# git clone --depth=1 https://github.com/1andrevich/homeproxy-hiddify.git package/luci-app-re-homeproxy
 
 # singbox-ui ( SingBox Kernel )
 # git clone --depth=1 -b main https://github.com/ang3el7z/luci-app-singbox-ui.git package/luci-app-singbox-ui
@@ -147,10 +147,10 @@ rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v
 
 # daed ( 修改内核大小为12M ）
 sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
-# rm -rf feeds/packages/net/{dae,daed}
-# rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
+rm -rf feeds/packages/net/{dae,daed}
+rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
 # git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
-# git clone --depth=1 git clone https://github.com/QiuSimons/luci-app-daed.git package/luci-app-dae
+git clone --depth=1 git clone https://github.com/QiuSimons/luci-app-daed.git package/luci-app-dae
 
 # jdCloud ax6600 led screen ctrl
 rm -rf package/emortal/luci-app-athena-led
