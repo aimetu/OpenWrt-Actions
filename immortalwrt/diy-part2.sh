@@ -195,7 +195,7 @@ rm -rf package/kernel/mac80211/patches/nss/ath11k/999-900-bss-transition-handlin
 sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 
 # 修复云编译报错
-sed -i 's/--set=llvm\.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
+sed -i 's/download-ci-llvm=true/download-ci-llvm=false/g' feeds/packages/lang/rust/Makefile
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
