@@ -27,7 +27,6 @@ on:
 #    - cron: 0 0 1 * *
 
 env:
-  ###############手动修改##############
   OPENWRT_NAME: libwrt
   REPO_URL: https://github.com/LiBwrt/LibWrt.git
   REPO_BRANCH: main-nss
@@ -37,7 +36,7 @@ env:
   DIY_P2_SH: libwrt/diy-part2.sh
   SSH_ACTIONS: false
   UPLOAD_FIRMWARE: true
-  UPLOAD_RELEASE: false
+  UPLOAD_RELEASE: true
   CACHE_TOOLCHAIN: true
   TZ: Asia/Shanghai
 
