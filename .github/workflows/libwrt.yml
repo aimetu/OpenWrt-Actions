@@ -29,7 +29,7 @@ on:
 env:
   ###############手动修改##############
   OPENWRT_NAME: libwrt
-  REPO_URL: https://github.com/LiBwrt/openwrt-6.x.git
+  REPO_URL: https://github.com/LiBwrt/LibWrt.git
   REPO_BRANCH: main-nss
   FEEDS_CONF: libwrt/feeds.conf.default
   CONFIG_FILE: libwrt/dev.config
