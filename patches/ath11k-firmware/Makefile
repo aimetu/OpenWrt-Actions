@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ath11k-firmware
-PKG_SOURCE_DATE:=2026-03-21
-PKG_SOURCE_VERSION:=e853ab3fedec869ca666e871ef4bab41237b09e6
-PKG_MIRROR_HASH:=4d37ebfec65fd5d1585c38bd6925fbc46bb6ad2a7eacc5ea93685f2873c1f291
+PKG_SOURCE_DATE:=2024-10-14
+PKG_SOURCE_VERSION:=15f050122da5ef5bef2cc8c7c19dfb7f98060a49
+PKG_MIRROR_HASH:=e7a89d1570f32552ade539376181494724b5eafb31d00451ff2dcf5a2922a0cb
 PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/VIKINGYFY/ath11k-firmware-ddwrt.git
+PKG_SOURCE_URL:=https://git.codelinaro.org/clo/ath-firmware/ath11k-firmware.git
 
 PKG_LICENSE_FILES:=LICENSE.qca_firmware
 
