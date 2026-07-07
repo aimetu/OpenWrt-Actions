@@ -4,7 +4,7 @@
 name: delete-cache
 
 on:
-  #自动清理：每周一早上4点
+  # 自动清理：每月 1 号 0 点
   schedule:
     - cron: 0 0 1 1-12 *
   #手动清理
