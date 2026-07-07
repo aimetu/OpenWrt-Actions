@@ -1,7 +1,7 @@
 name: delete-releases
 
 on:
-  #自动清理：每周 5 00:00 点
+  # 自动清理：每周 5 00:00 点
   schedule:
     - cron: 0 0 * * 5
   #手动清理
