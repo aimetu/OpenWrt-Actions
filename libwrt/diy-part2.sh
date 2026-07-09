@@ -202,21 +202,9 @@ sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "M
 sed -i 's/download-ci-llvm=true/download-ci-llvm=false/g' feeds/packages/lang/rust/Makefile
 
 # 修复编译报错
-wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/ath11k-firmware/Makefile
-# wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/immortalwrt/immortalwrt/refs/heads/master/package/firmware/ath11k-firmware/Makefile
+# wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/ath11k-firmware/Makefile
+# wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/qosmio/openwrt-ipq/refs/heads/main-nss/package/firmware/ath11k-firmware/Makefile
 # wget -O feeds/packages/lang/node/node-pnpm/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/lang/node/node-pnpm/Makefile
-# wget -O feeds/packages/net/wget/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/wget/Makefile
-# wget -O feeds/packages/lang/rust/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/rust/Makefile
-# wget -O feeds/packages/lang/python/python3-version.mk https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python/python3-version.mk
-# wget -O feeds/packages/lang/python/python3/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/Makefile
-# wget -O feeds/packages/lang/python/python3/patches/003-do-not-run-compileall.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/003-do-not-run-compileall.patch
-# wget -O feeds/packages/lang/python/python3/patches/004-do-not-write-bytes-codes.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/004-do-not-write-bytes-codes.patch
-# wget -O feeds/packages/lang/python/python3/patches/009-don-t-run-profile-task-during-cross-build.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/009-don-t-run-profile-task-during-cross-build.patch
-# wget -O feeds/packages/lang/python/python3/patches/024-musl-find_library.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/024-musl-find_library.patch
-# wget -O feeds/packages/lang/python/python3/patches/025-choose-python-config-version.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/025-choose-python-config-version.patch
-# wget -O feeds/packages/lang/python/python3/patches/026-openssl-feature-flags.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/026-openssl-feature-flags.patch
-# wget -O feeds/packages/lang/python/python3/patches/027-fix-host-build-libressl.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/027-fix-host-build-libressl.patch
-# wget -O feeds/packages/lang/python/python3/patches/100-test_hashlib-better-handle-support-for-SHA3.patch https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/python3/patches/100-test_hashlib-better-handle-support-for-SHA3.patch
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
