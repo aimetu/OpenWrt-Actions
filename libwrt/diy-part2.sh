@@ -157,6 +157,9 @@ rm -rf package/emortal/luci-app-athena-led
 git clone --depth=1 -b main https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller.git package/luci-app-athena-led
 # git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
 # git clone --depth=1 -b LuCI2-JS https://github.com/Sh1rokoDev/luci-app-athena-led.git package/luci-app-athena-led
+sed -i "s/version = "2.5.0"/version = "2.5.0"/g" package/luci-app-athena-led/athena-led/Cargo.toml
+sed -i "s/PKG_VERSION:=2.5.0/PKG_VERSION:=2.4.0/g" package/luci-app-athena-led/athena-led/Makefile
+sed -i "s/PKG_VERSION:=2.5.0/PKG_VERSION:=2.4.0/g" package/luci-app-athena-led/luci-app-athena-led/Makefile
 
 # luci-app-diskman
 # rm -rf feeds/luci/applications/luci-app-diskman
