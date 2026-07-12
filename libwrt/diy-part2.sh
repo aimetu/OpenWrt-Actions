@@ -106,10 +106,10 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # clashoo ( Mihomo Kernel )
-# git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
+git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
 
 # ssclash ( Mihomo Kernel )
-# git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
+git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
 
 # fchomo ( Mihomo Kernel  ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/luci-app-fchomo
@@ -125,7 +125,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # git clone --depth=1 -b main https://github.com/ang3el7z/luci-app-singbox-ui.git package/luci-app-singbox-ui
 
 # momo ( SingBox Kernel ) OpenWrt ≥ 24.10
-# git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
+git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git package/luci-app-momo
 
 # nekobox ( SingBox Kernel ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b main https://github.com/Thaolga/openwrt-nekobox.git package/luci-app-nekobox
@@ -134,8 +134,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/luci-app-neko
 
 # helloworld（ Mihomo & Xray Kernel ）
-# git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
-# rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
+git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
+rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
 
 # xray ( Xray Kernel )
 # git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
@@ -147,9 +147,9 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 
 # daed ( 修改内核大小为12M ）
 sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
-# rm -rf feeds/packages/net/{dae,daed}
-# rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
-# git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
+rm -rf feeds/packages/net/{dae,daed}
+rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
+git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
 # git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
 
 # jdCloud ax6600 led screen ctrl
