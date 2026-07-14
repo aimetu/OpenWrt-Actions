@@ -82,13 +82,16 @@ git clone --depth=1 -b dev https://github.com/stevenjoezhang/luci-app-adguardhom
 # mosdns
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/luci/applications/luci-app-mosdns
-git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
+git clone --depth=1 -b v5 https://github.com/sbwml/luci-app-mosdns.git package/luci-app-mosdns
+
+# oxidns
+git clone --depth=1 https://github.com/svenshi/luci-app-oxidns.git package/luci-app-oxidns
 
 # smartdns
 # rm -rf feeds/packages/net/smartdns
 # rm -rf feeds/luci/applications/luci-app-smartdns
 # git clone --depth=1 https://github.com/pymumu/openwrt-smartdns.git package/openwrt-smartdns
-# git clone --depth=1 https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+# git clone --depth=1 -b master https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
 # passwall(2) ( SingBox & Xray Kernel )
 rm -rf feeds/luci/applications/{luci-app-passwall,luci-app-passwall2}
@@ -102,14 +105,15 @@ rm -rf feeds/luci/applications/luci-app-openclash
 git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
-# clashoo ( Mihomo Kernel )
-git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
-
 # nikki ( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # ssclash ( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
+
+# clashoo ( Mihomo Kernel )
+git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
+rm -rf package/luci-app-clashoo/clashoo
 
 # fchomo ( Mihomo Kernel  ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/luci-app-fchomo
