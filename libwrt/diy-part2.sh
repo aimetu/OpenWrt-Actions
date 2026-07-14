@@ -43,6 +43,9 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" package/network/config/wifi-scr
 # 更换 Kernel 内核版本
 # sed -i "s/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g" target/linux/qualcommax/Makefile
 
+# 修改 ipq60xx 内核 6M 大小为 12M 
+# sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
+
 # samba 解除 root 限制
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
 
@@ -112,16 +115,15 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
 
 # clashoo ( Mihomo Kernel )
-git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
-# rm -rf package/luci-app-clashoo/clashoo
+# git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
 
 # fchomo ( Mihomo Kernel  ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/luci-app-fchomo
 
 # homeproxy ( SingBox Kernel )
 rm -rf feeds/luci/applications/luci-app-homeproxy
-# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 git clone --depth=1 https://github.com/VIKINGYFY/homeproxy.git package/luci-app-homeproxy
+# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # homeproxy-hiddify ( SingBox Kernel )
 # git clone --depth=1 https://github.com/1andrevich/homeproxy-hiddify.git package/luci-app-re-homeproxy
@@ -139,8 +141,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/luci-app-neko
 
 # helloworld（ Mihomo & Xray Kernel ）
-git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
-rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
+# git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
+# rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
 
 # xray ( Xray Kernel )
 # git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
@@ -150,11 +152,10 @@ rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v
 # rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 # git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/openwrt_helloworld
 
-# daed ( 修改内核大小为12M ）
-sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
-rm -rf feeds/packages/net/{dae,daed}
-rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
-git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
+# daed ( 需修改内核大小为 12M ）
+# rm -rf feeds/packages/net/{dae,daed}
+# rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
+# git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
 # git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
 
 # jdCloud ax6600 led screen ctrl
