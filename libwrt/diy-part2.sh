@@ -115,7 +115,7 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git 
 git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
 
 # clashoo ( Mihomo Kernel )
-# git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
+git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
 
 # fchomo ( Mihomo Kernel  ) OpenWrt ≥ 24.10
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/luci-app-fchomo
