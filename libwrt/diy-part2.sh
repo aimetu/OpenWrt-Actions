@@ -153,9 +153,9 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 # git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/openwrt_helloworld
 
 # daed ( 需修改内核大小为 12M ）
-# rm -rf feeds/packages/net/{dae,daed}
-# rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
-# git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
+rm -rf feeds/packages/net/{dae,daed}
+rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
+git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
 # git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
 
 # jdCloud ax6600 led screen ctrl
