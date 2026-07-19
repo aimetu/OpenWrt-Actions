@@ -105,8 +105,8 @@ git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall
 
 # OpenClash ( Mihomo Kernel )
 rm -rf feeds/luci/applications/luci-app-openclash
-git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 # git clone -b master https://github.com/vernesong/OpenClash.git package/luci-app-openclash
+git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/luci-app-openclash
 
 # nikki ( Mihomo Kernel )
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
@@ -121,8 +121,7 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/luci-app-fchomo
 
 # homeproxy ( SingBox Kernel )
-rm -rf feeds/luci/applications/luci-app-homeproxy
-git clone --depth=1 https://github.com/VIKINGYFY/homeproxy.git package/luci-app-homeproxy
+# rm -rf feeds/luci/applications/luci-app-homeproxy
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # homeproxy-hiddify ( SingBox Kernel )
@@ -160,9 +159,9 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-ap
 
 # jdCloud ax6600 led screen ctrl
 rm -rf package/emortal/luci-app-athena-led
-git clone --depth=1 -b main https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller.git package/luci-app-athena-led
 # git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
 # git clone --depth=1 -b LuCI2-JS https://github.com/Sh1rokoDev/luci-app-athena-led.git package/luci-app-athena-led
+git clone --depth=1 -b main https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller.git package/luci-app-athena-led
 sed -i "s/version = "2.5.0"/version = "2.4.0"/g" package/luci-app-athena-led/athena-led/Cargo.toml
 sed -i "s/PKG_VERSION:=2.5.0/PKG_VERSION:=2.4.0/g" package/luci-app-athena-led/athena-led/Makefile
 sed -i "s/PKG_VERSION:=2.5.0/PKG_VERSION:=2.4.0/g" package/luci-app-athena-led/luci-app-athena-led/Makefile
