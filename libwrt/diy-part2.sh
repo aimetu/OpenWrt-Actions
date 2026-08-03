@@ -112,7 +112,7 @@ git clone --depth=1 -b dev https://github.com/vernesong/OpenClash.git package/lu
 git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki.git package/luci-app-nikki
 
 # ssclash ( Mihomo Kernel )
-git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
+# git clone --depth=1 -b main https://github.com/zerolabnet/SSClash.git package/luci-app-ssclash
 
 # clashoo ( Mihomo Kernel )
 git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-app-clashoo
