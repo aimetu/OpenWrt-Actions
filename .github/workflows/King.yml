@@ -32,7 +32,7 @@ env:
   REPO_URL: https://github.com/VIKINGYFY/immortalwrt
   REPO_BRANCH: main
   FEEDS_CONF: King/feeds.conf.default
-  CONFIG_FILE: King/.config
+  CONFIG_FILE: King/info.config
   DIY_P1_SH: King/diy-part1.sh
   DIY_P2_SH: King/diy-part2.sh
   SSH_ACTIONS: false
