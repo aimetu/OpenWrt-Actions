@@ -211,7 +211,7 @@ sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "M
 sed -i 's/download-ci-llvm=true/download-ci-llvm=false/g' feeds/packages/lang/rust/Makefile
 
 # 修复编译报错
-wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/King/ath11k-firmware/Makefile
+# wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/King/ath11k-firmware/Makefile
 # wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/qosmio/openwrt-ipq/refs/heads/main-nss/package/firmware/ath11k-firmware/Makefile
 # wget -O feeds/packages/lang/node/node-pnpm/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/lang/node/node-pnpm/Makefile
 
