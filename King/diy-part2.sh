@@ -23,11 +23,13 @@ sed -i "s/ImmortalWrt/OpenWrt/g" package/base-files/image-config.in
 sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 # 修改 wifi 无线名称
-sed -i "s/ImmortalWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+sed -i "s/OWRT/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+sed -i "s/12345678/password/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+# sed -i "s/ImmortalWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
 # 修改 wifi 无线名称 & 密码
-sed -i "s/BASE_SSID='.*'/BASE_SSID='OpenWrt'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
-sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+# sed -i "s/BASE_SSID='.*'/BASE_SSID='OpenWrt'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
+# sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
 # 最大连接数修改为 65535
 # sed -i "s/nf_conntrack_max=.*/nf_conntrack_max=65535/g" package/kernel/linux/files/sysctl-nf-conntrack.conf
