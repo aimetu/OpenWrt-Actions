@@ -29,7 +29,7 @@ on:
 env:
   ###############手动修改##############
   OPENWRT_NAME: King
-  REPO_URL: https://github.com/VIKINGYFY/immortalwrt
+  REPO_URL: https://github.com/aimetu/ImmortalWrt
   REPO_BRANCH: main
   FEEDS_CONF: King/feeds.conf.default
   CONFIG_FILE: King/info.config
