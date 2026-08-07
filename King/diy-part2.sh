@@ -14,16 +14,15 @@
 sed -i "s/hostname='.*'/hostname='OpenWrt'/g" package/base-files/files/bin/config_generate
 
 # 修改 固件版本 显示名称
-sed -i "s/LibWrt/OpenWrt/g" Config.in
-sed -i "s/LibWrt/OpenWrt/g" include/version.mk
-sed -i "s/LibWrt/OpenWrt/g" config/Config-images.in
-sed -i "s/LibWrt/OpenWrt/g" package/base-files/image-config.in
+sed -i "s/ImmortalWrt/OpenWrt/g" Config.in
+sed -i "s/ImmortalWrt/OpenWrt/g" include/version.mk
+sed -i "s/ImmortalWrt/OpenWrt/g" config/Config-images.in
+sed -i "s/ImmortalWrt/OpenWrt/g" package/base-files/image-config.in
 
 # 默认网关 ip 地址修改
 sed -i 's/192.168.1.1/10.10.10.1/g' package/base-files/files/bin/config_generate
 
 # 修改 wifi 无线名称
-sed -i "s/LibWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 sed -i "s/ImmortalWrt/OpenWrt/g" package/network/config/wifi-scripts/files/lib/wifi/mac80211.uc
 
 # 修改 wifi 无线名称 & 密码
@@ -44,7 +43,7 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" package/network/config/wifi-scr
 # sed -i "s/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g" target/linux/qualcommax/Makefile
 
 # 修改 ipq60xx 内核 6M 大小为 12M 
-sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
+# sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
 
 # samba 解除 root 限制
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
