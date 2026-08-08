@@ -44,7 +44,7 @@ sed -i "s/BASE_WORD='.*'/BASE_WORD='password'/g" package/network/config/wifi-scr
 # sed -i "s/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g" target/linux/qualcommax/Makefile
 
 # 修改 ipq60xx 内核 6M 大小为 12M 
-# sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
+sed -i "s/KERNEL_SIZE := 6144k/KERNEL_SIZE := 12288k/g" target/linux/qualcommax/image/ipq60xx.mk
 
 # samba 解除 root 限制
 # sed -i 's/invalid users = root/#&/g' feeds/packages/net/samba4/files/smb.conf.template
