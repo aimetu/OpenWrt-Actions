@@ -122,7 +122,8 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/luci-app-fchomo
 
 # homeproxy ( SingBox Kernel )
-# rm -rf feeds/luci/applications/luci-app-homeproxy
+rm -rf feeds/luci/applications/luci-app-homeproxy
+git clone --depth=1 https://github.com/VIKINGYFY/packages.git package/openwrt-homeproxy
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # homeproxy-hiddify ( SingBox Kernel )
