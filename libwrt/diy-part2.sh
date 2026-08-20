@@ -211,7 +211,7 @@ sed -i 's/download-ci-llvm=true/download-ci-llvm=false/g' feeds/packages/lang/ru
 
 # 修复编译报错
 # wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/ath11k-firmware/Makefile
-# wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/qosmio/openwrt-ipq/refs/heads/main-nss/package/firmware/ath11k-firmware/Makefile
+wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/qosmio/openwrt-ipq/refs/heads/main-nss/package/firmware/ath11k-firmware/Makefile
 # wget -O feeds/packages/lang/node/node-pnpm/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/lang/node/node-pnpm/Makefile
 
 ./scripts/feeds update -a
