@@ -194,8 +194,8 @@ git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/lu
 # git clone --depth=1 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
 
 # 升级 golang 核心
-# rm -rf feeds/packages/lang/golang
-# git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 
 # 升级 geodata 核心
 # rm -rf feeds/packages/net/v2ray-geodata
