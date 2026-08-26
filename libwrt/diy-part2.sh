@@ -140,8 +140,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/luci-app-neko
 
 # helloworld（ Mihomo & Xray Kernel ）
-# git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
-# rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
+git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
+rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
 
 # xray ( Xray Kernel )
 # git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
