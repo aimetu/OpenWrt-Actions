@@ -121,7 +121,8 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/luci-app-fchomo
 
 # homeproxy ( SingBox Kernel )
-# rm -rf feeds/luci/applications/luci-app-homeproxy
+rm -rf feeds/luci/applications/luci-app-homeproxy
+git clone --depth=1 https://github.com/coffeelb/luci-app-csing-box.git package/luci-app-csing-box
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # homeproxy-hiddify ( SingBox Kernel )
@@ -193,8 +194,8 @@ git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/lu
 # git clone --depth=1 https://github.com/sbwml/luci-app-webdav.git package/luci-app-webdav
 
 # 升级 golang 核心
-# rm -rf feeds/packages/lang/golang
-# git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 
 # 升级 geodata 核心
 # rm -rf feeds/packages/net/v2ray-geodata
