@@ -186,8 +186,14 @@ sed -i "s/PKG_VERSION:=2.5.0/PKG_VERSION:=2.4.0/g" package/luci-app-athena-led/l
 rm -rf feeds/luci/applications/luci-app-lucky
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
 
+# appfilter
+rm -rf feeds/packages/net/open-app-filter
+rm -rf feeds/luci/applications/luci-app-appfilter
+git clone --depth=1 https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
+
 # wechatpush
 rm -rf feeds/luci/applications/luci-app-wechatpush
+open-app-filter
 git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
 
 # easytier
