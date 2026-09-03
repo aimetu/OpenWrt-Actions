@@ -159,7 +159,7 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-ap
 # git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
 
 # honk ( eBPF 透明代理引擎, 需修改内核大小为 12M ）
-git clone --depth=1 https://github.com/QiuSimons/luci-app-honk.git package/luci-app-honk
+# git clone --depth=1 https://github.com/QiuSimons/luci-app-honk.git package/luci-app-honk
 
 # jdCloud ax6600 led screen ctrl
 rm -rf package/emortal/luci-app-athena-led
@@ -187,9 +187,9 @@ rm -rf feeds/luci/applications/luci-app-lucky
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
 
 # appfilter
-rm -rf feeds/packages/net/open-app-filter
-rm -rf feeds/luci/applications/luci-app-appfilter
-git clone --depth=1 https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
+# rm -rf feeds/packages/net/open-app-filter
+# rm -rf feeds/luci/applications/luci-app-appfilter
+# git clone --depth=1 https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
 
 # wechatpush
 rm -rf feeds/luci/applications/luci-app-wechatpush
