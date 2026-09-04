@@ -123,6 +123,7 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-
 
 # homeproxy ( SingBox Kernel )
 # rm -rf feeds/luci/applications/luci-app-homeproxy
+git clone --depth=1 https://github.com/coffeelb/luci-app-csing-box.git package/luci-app-csing-box
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # homeproxy-hiddify ( SingBox Kernel )
@@ -141,8 +142,8 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 # git clone --depth=1 -b main https://github.com/nosignals/openwrt-neko.git package/luci-app-neko
 
 # helloworld（ Mihomo & Xray Kernel ）
-# git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
-# rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
+git clone --depth=1 -b dev https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
+rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v2raya,v2ray-core,v2ray-plugin,v2ray-geodata}
 
 # xray ( Xray Kernel )
 # git clone --depth=1 https://github.com/yichya/luci-app-xray.git package/luci-app-xray
@@ -152,11 +153,14 @@ git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-momo.git p
 # rm -rf feeds/packages/net/{xray-core,v2ray-core,v2ray-geodata,sing-box}
 # git clone --depth=1 https://github.com/sbwml/openwrt_helloworld.git package/openwrt_helloworld
 
-# daed ( 需修改内核大小为 12M ）
+# daed ( eBPF 透明代理引擎, 需修改内核大小为 12M ）
 rm -rf feeds/packages/net/{dae,daed}
 rm -rf feeds/luci/applications/{luci-app-dae,luci-app-daed}
 git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/luci-app-daede
 # git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
+
+# honk ( eBPF 透明代理引擎, 需修改内核大小为 12M ）
+# git clone --depth=1 https://github.com/QiuSimons/luci-app-honk.git package/luci-app-honk
 
 # jdCloud ax6600 led screen ctrl
 rm -rf package/emortal/luci-app-athena-led
@@ -183,8 +187,14 @@ sed -i "s/PKG_VERSION:=2.5.0/PKG_VERSION:=2.4.0/g" package/luci-app-athena-led/l
 rm -rf feeds/luci/applications/luci-app-lucky
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/luci-app-lucky
 
+# appfilter
+# rm -rf feeds/packages/net/open-app-filter
+# rm -rf feeds/luci/applications/luci-app-appfilter
+# git clone --depth=1 https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
+
 # wechatpush
 rm -rf feeds/luci/applications/luci-app-wechatpush
+open-app-filter
 git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
 
 # easytier
