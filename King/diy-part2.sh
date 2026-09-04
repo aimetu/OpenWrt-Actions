@@ -122,7 +122,8 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-
 # git clone --depth=1 -b master https://github.com/fcshark-org/openwrt-fchomo.git package/luci-app-fchomo
 
 # homeproxy ( SingBox Kernel )
-# rm -rf feeds/luci/applications/luci-app-homeproxy
+rm -rf feeds/luci/applications/luci-app-homeproxy
+git clone --depth=1 https://github.com/coffeelb/homeproxy.git package/luci-app-homeproxy
 git clone --depth=1 https://github.com/coffeelb/luci-app-csing-box.git package/luci-app-csing-box
 # git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
@@ -194,7 +195,6 @@ git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/luci-ap
 
 # wechatpush
 rm -rf feeds/luci/applications/luci-app-wechatpush
-open-app-filter
 git clone --depth=1 https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
 
 # easytier
