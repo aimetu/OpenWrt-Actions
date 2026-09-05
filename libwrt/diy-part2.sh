@@ -122,9 +122,9 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-
 
 # homeproxy ( SingBox Kernel )
 rm -rf feeds/luci/applications/luci-app-homeproxy
-git clone --depth=1 https://github.com/coffeelb/homeproxy.git package/luci-app-homeproxy
+# git clone --depth=1 https://github.com/coffeelb/homeproxy.git package/luci-app-homeproxy
 git clone --depth=1 https://github.com/coffeelb/luci-app-csing-box.git package/luci-app-csing-box
-# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
+git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # homeproxy-hiddify ( SingBox Kernel )
 # git clone --depth=1 https://github.com/1andrevich/homeproxy-hiddify.git package/luci-app-re-homeproxy
@@ -221,8 +221,8 @@ sed -i 's/download-ci-llvm=true/download-ci-llvm=false/g' feeds/packages/lang/ru
 
 # 修复编译报错
 # wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/ath11k-firmware/Makefile
-wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/qosmio/openwrt-ipq/refs/heads/main-nss/package/firmware/ath11k-firmware/Makefile
-# wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/fanchmwrt/fanchmwrt/refs/heads/openwrt-main/package/firmware/ath11k-firmware/Makefile
+# wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/qosmio/openwrt-ipq/refs/heads/main-nss/package/firmware/ath11k-firmware/Makefile
+wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/fanchmwrt/fanchmwrt/refs/heads/openwrt-main/package/firmware/ath11k-firmware/Makefile
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
