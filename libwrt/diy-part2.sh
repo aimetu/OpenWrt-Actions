@@ -124,7 +124,8 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-clashoo.git package/luci-
 rm -rf feeds/luci/applications/luci-app-homeproxy
 # git clone --depth=1 https://github.com/coffeelb/homeproxy.git package/luci-app-homeproxy
 git clone --depth=1 https://github.com/coffeelb/luci-app-csing-box.git package/luci-app-csing-box
-git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
+git clone --depth=1 https://github.com/XiaoHaiSly/luci-app-homeproxy.git package/luci-app-homeproxy
+# git clone --depth=1 -b dev https://github.com/immortalwrt/homeproxy.git package/luci-app-homeproxy
 
 # homeproxy-hiddify ( SingBox Kernel )
 # git clone --depth=1 https://github.com/1andrevich/homeproxy-hiddify.git package/luci-app-re-homeproxy
