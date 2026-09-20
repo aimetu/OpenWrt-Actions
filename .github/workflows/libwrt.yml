@@ -27,9 +27,9 @@ on:
 #    - cron: 0 0 1 * *
 
 env:
-  OPENWRT_NAME: libwrt
-  REPO_URL: https://github.com/aimetu/LibWrt.git
-  REPO_BRANCH: main-nss
+  OPENWRT_NAME: libwrt-6.12.x
+  REPO_URL: https://github.com/LiBwrt/LibWrt.git
+  REPO_BRANCH: 25.12-nss
   FEEDS_CONF: libwrt/feeds.conf.default
   CONFIG_FILE: libwrt/info.config
   DIY_P1_SH: libwrt/diy-part1.sh
