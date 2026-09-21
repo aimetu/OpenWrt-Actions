@@ -30,7 +30,7 @@ env:
   OPENWRT_NAME: libwrt-6.12.x
   REPO_URL: https://github.com/LiBwrt/LibWrt.git
   REPO_BRANCH: 25.12-nss
-  FEEDS_CONF: libwrt/feeds.conf.default
+  FEEDS_CONF: libwrt/25.feeds.conf.default
   CONFIG_FILE: libwrt/info.config
   DIY_P1_SH: libwrt/diy-part1.sh
   DIY_P2_SH: libwrt/diy-part2.sh
