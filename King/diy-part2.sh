@@ -162,6 +162,7 @@ rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v
 # git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
 
 # honk ( eBPF 透明代理引擎, 需修改内核大小为 12M ）
+# git clone --depth=1 https://github.com/kenzok8/openwrt-honk.git package/luci-app-honk
 git clone --depth=1 https://github.com/QiuSimons/luci-app-honk.git package/luci-app-honk
 
 # jdCloud ax6600 led screen ctrl
