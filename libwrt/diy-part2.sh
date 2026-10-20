@@ -228,5 +228,7 @@ sed -i 's/download-ci-llvm=true/download-ci-llvm=false/g' feeds/packages/lang/ru
 # wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/qosmio/openwrt-ipq/refs/heads/main-nss/package/firmware/ath11k-firmware/Makefile
 wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/fanchmwrt/fanchmwrt/refs/heads/openwrt-main/package/firmware/ath11k-firmware/Makefile
 
+wget -O package/libs/libffi/Makefile https://raw.githubusercontent.com/aimetu/OpenWrt-Actions/refs/heads/main/patches/libs/libffi/Makefile
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
