@@ -162,19 +162,19 @@ rm -rf package/luci-app-ssr-plus/{mosdns,mihomo,xray-core,hysteria,chinadns-ng,v
 # git clone --depth=1 https://github.com/QiuSimons/luci-app-daed.git package/luci-app-daed
 
 # honk ( eBPF 透明代理引擎, 需修改内核大小为 12M ）
-# git clone --depth=1 https://github.com/kenzok8/openwrt-honk.git package/luci-app-honk
-git clone --depth=1 https://github.com/QiuSimons/luci-app-honk.git package/luci-app-honk
+git clone --depth=1 https://github.com/kenzok8/openwrt-honk.git package/luci-app-honk
+# git clone --depth=1 https://github.com/QiuSimons/luci-app-honk.git package/luci-app-honk
 # git clone --depth=1 https://github.com/daeuniverse/openwrt-packages.git package/openwrt-honk
 
 # jdCloud ax6600 led screen ctrl
 rm -rf package/emortal/luci-app-athena-led
 # git clone --depth=1 -b main https://github.com/NONGFAH/luci-app-athena-led.git package/luci-app-athena-led
-# git clone --depth=1 -b LuCI2-JS https://github.com/Sh1rokoDev/luci-app-athena-led.git package/luci-app-athena-led
+git clone --depth=1 -b LuCI2-JS https://github.com/Sh1rokoDev/luci-app-athena-led.git package/luci-app-athena-led
 # git clone --depth=1 https://github.com/perlyz/JDC-AX6600-Athena-LED-Controller-C.git package/luci-app-athena-led
-git clone --depth=1 -b main https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller.git package/luci-app-athena-led
-sed -i "s/version = "2.5.0"/version = "2.4.0"/g" package/luci-app-athena-led/athena-led/Cargo.toml
-sed -i "s/PKG_VERSION:=2.5.0/PKG_VERSION:=2.4.0/g" package/luci-app-athena-led/athena-led/Makefile
-sed -i "s/PKG_VERSION:=2.5.0/PKG_VERSION:=2.4.0/g" package/luci-app-athena-led/luci-app-athena-led/Makefile
+# git clone --depth=1 -b main https://github.com/unraveloop/JDC-AX6600-Athena-LED-Controller.git package/luci-app-athena-led
+# sed -i "s/version = "2.5.0"/version = "2.4.0"/g" package/luci-app-athena-led/athena-led/Cargo.toml
+# sed -i "s/PKG_VERSION:=2.5.0/PKG_VERSION:=2.4.0/g" package/luci-app-athena-led/athena-led/Makefile
+# sed -i "s/PKG_VERSION:=2.5.0/PKG_VERSION:=2.4.0/g" package/luci-app-athena-led/luci-app-athena-led/Makefile
 
 # luci-app-diskman
 # rm -rf feeds/luci/applications/luci-app-diskman
