@@ -34,7 +34,7 @@ env:
   REPO_BRANCH: main
   FEEDS_CONF: King/feeds.conf.default
   CONFIG_FILE: King/info.config
-  # CONFIG_FILE_RXTRA:  King/info-package.config
+  CONFIG_FILE_RXTRA:  King/extended.config
   DIY_P1_SH: King/diy-part1.sh
   DIY_P2_SH: King/diy-part2.sh
   SSH_ACTIONS: false
