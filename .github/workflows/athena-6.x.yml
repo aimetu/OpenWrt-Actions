@@ -34,7 +34,7 @@ env:
   REPO_BRANCH: main-nss
   FEEDS_CONF: libwrt/feeds.conf.default
   CONFIG_FILE: libwrt/info.config
-  # CONFIG_FILE_RXTRA:  libwrt/info-package.config
+  CONFIG_FILE_RXTRA:  libwrt/extended.config
   DIY_P1_SH: libwrt/diy-part1.sh
   DIY_P2_SH: libwrt/diy-part2.sh
   SSH_ACTIONS: false
@@ -116,7 +116,7 @@ jobs:
     - name: Cache Toolchain
       uses: HiGarfield/cachewrtbuild@main
       with:
-        ccache: false
+        ccache: true
         mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
         prefix: ${{ env.OPENWRT_PATH }}
         
